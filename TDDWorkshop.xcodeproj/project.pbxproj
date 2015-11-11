@@ -18,6 +18,7 @@
 		A162F1901BEA9A9800262528 /* PhotoStreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A162F18F1BEA9A9800262528 /* PhotoStreamViewController.swift */; };
 		A162F1921BEA9A9E00262528 /* SpeakersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A162F1911BEA9A9E00262528 /* SpeakersViewController.swift */; };
 		A162F1941BEA9AA400262528 /* PollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A162F1931BEA9AA400262528 /* PollViewController.swift */; };
+		A1DFDFA31BF38292007D3C33 /* PollManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DFDFA21BF38292007D3C33 /* PollManager.swift */; };
 		FB406D92AC1B66A282B75006 /* Pods_TDDWorkshopTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FB712EE2487B0C9E9FE5485 /* Pods_TDDWorkshopTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,7 @@
 		A162F18F1BEA9A9800262528 /* PhotoStreamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoStreamViewController.swift; path = Classes/PhotoStream/PhotoStreamViewController.swift; sourceTree = "<group>"; };
 		A162F1911BEA9A9E00262528 /* SpeakersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpeakersViewController.swift; path = Classes/Speakers/SpeakersViewController.swift; sourceTree = "<group>"; };
 		A162F1931BEA9AA400262528 /* PollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PollViewController.swift; path = Classes/Poll/PollViewController.swift; sourceTree = "<group>"; };
+		A1DFDFA21BF38292007D3C33 /* PollManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PollManager.swift; sourceTree = "<group>"; };
 		DB38C724F8850303F0A99848 /* Pods-TDDWorkshopTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TDDWorkshopTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TDDWorkshopTests/Pods-TDDWorkshopTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -151,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				A162F1931BEA9AA400262528 /* PollViewController.swift */,
+				A1DFDFA21BF38292007D3C33 /* PollManager.swift */,
 			);
 			name = Poll;
 			sourceTree = "<group>";
@@ -388,6 +391,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1DFDFA31BF38292007D3C33 /* PollManager.swift in Sources */,
 				A162F18B1BEA9A8700262528 /* AgendaViewController.swift in Sources */,
 				A162F1941BEA9AA400262528 /* PollViewController.swift in Sources */,
 				A162F18E1BEA9A9200262528 /* Colors.swift in Sources */,
