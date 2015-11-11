@@ -19,6 +19,7 @@
 		A162F15F1BEA992400262528 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A162F15E1BEA992400262528 /* Assets.xcassets */; };
 		A162F1621BEA992400262528 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A162F1601BEA992400262528 /* LaunchScreen.storyboard */; };
 		A162F16D1BEA992400262528 /* TDDWorkshopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A162F16C1BEA992400262528 /* TDDWorkshopTests.swift */; };
+		A1DFDFA51BF3D126007D3C33 /* PollManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DFDFA41BF3D126007D3C33 /* PollManager.swift */; };
 		FB406D92AC1B66A282B75006 /* Pods_TDDWorkshopTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FB712EE2487B0C9E9FE5485 /* Pods_TDDWorkshopTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +54,7 @@
 		A162F1681BEA992400262528 /* TDDWorkshopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TDDWorkshopTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A162F16C1BEA992400262528 /* TDDWorkshopTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDDWorkshopTests.swift; sourceTree = "<group>"; };
 		A162F16E1BEA992400262528 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A1DFDFA41BF3D126007D3C33 /* PollManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PollManager.swift; sourceTree = "<group>"; };
 		DB38C724F8850303F0A99848 /* Pods-TDDWorkshopTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TDDWorkshopTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TDDWorkshopTests/Pods-TDDWorkshopTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,6 +101,7 @@
 		5104324D836308F5C548BAB5 /* Poll */ = {
 			isa = PBXGroup;
 			children = (
+				A1DFDFA41BF3D126007D3C33 /* PollManager.swift */,
 				510430AFBBDF3557A5D8AF14 /* PollViewController.swift */,
 			);
 			path = Poll;
@@ -391,6 +394,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1DFDFA51BF3D126007D3C33 /* PollManager.swift in Sources */,
 				A162F1581BEA992400262528 /* AppDelegate.swift in Sources */,
 				51043677CCD46E1C3EB6E004 /* PollViewController.swift in Sources */,
 				51043027EBDFCEFE5D0A73F1 /* Colors.swift in Sources */,
