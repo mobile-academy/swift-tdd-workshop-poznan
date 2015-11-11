@@ -7,18 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		51043027EBDFCEFE5D0A73F1 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51043554A6BA672E01979F0C /* Colors.swift */; };
+		51043677CCD46E1C3EB6E004 /* PollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510430AFBBDF3557A5D8AF14 /* PollViewController.swift */; };
+		51043771E48EF9925E8EF8AD /* AgendaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5104375B7F4D2F27F5B3423A /* AgendaViewController.swift */; };
+		51043A0C439E7A3453F73B18 /* PhotoStreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510437064268061B024AFB34 /* PhotoStreamViewController.swift */; };
+		51043A3EF7C3974F1615271B /* SpeakersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510435EDEF61D28A105D11FC /* SpeakersViewController.swift */; };
 		81DC540A880D1280C51754B0 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08C13977E91D5A6246EC94A4 /* Pods.framework */; };
 		A162F1581BEA992400262528 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A162F1571BEA992400262528 /* AppDelegate.swift */; };
 		A162F15D1BEA992400262528 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A162F15B1BEA992400262528 /* Main.storyboard */; };
 		A162F15F1BEA992400262528 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A162F15E1BEA992400262528 /* Assets.xcassets */; };
 		A162F1621BEA992400262528 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A162F1601BEA992400262528 /* LaunchScreen.storyboard */; };
 		A162F16D1BEA992400262528 /* TDDWorkshopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A162F16C1BEA992400262528 /* TDDWorkshopTests.swift */; };
-		A162F18B1BEA9A8700262528 /* AgendaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A162F18A1BEA9A8700262528 /* AgendaViewController.swift */; };
-		A162F18E1BEA9A9200262528 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A162F18D1BEA9A9200262528 /* Colors.swift */; };
-		A162F1901BEA9A9800262528 /* PhotoStreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A162F18F1BEA9A9800262528 /* PhotoStreamViewController.swift */; };
-		A162F1921BEA9A9E00262528 /* SpeakersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A162F1911BEA9A9E00262528 /* SpeakersViewController.swift */; };
-		A162F1941BEA9AA400262528 /* PollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A162F1931BEA9AA400262528 /* PollViewController.swift */; };
-		A1DFDFA31BF38292007D3C33 /* PollManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DFDFA21BF38292007D3C33 /* PollManager.swift */; };
 		FB406D92AC1B66A282B75006 /* Pods_TDDWorkshopTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FB712EE2487B0C9E9FE5485 /* Pods_TDDWorkshopTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +36,11 @@
 		08C13977E91D5A6246EC94A4 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E9205E1648BE5EFF553320D /* Pods-TDDWorkshopTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TDDWorkshopTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TDDWorkshopTests/Pods-TDDWorkshopTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4FB712EE2487B0C9E9FE5485 /* Pods_TDDWorkshopTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TDDWorkshopTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		510430AFBBDF3557A5D8AF14 /* PollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PollViewController.swift; sourceTree = "<group>"; };
+		51043554A6BA672E01979F0C /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		510435EDEF61D28A105D11FC /* SpeakersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeakersViewController.swift; sourceTree = "<group>"; };
+		510437064268061B024AFB34 /* PhotoStreamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoStreamViewController.swift; sourceTree = "<group>"; };
+		5104375B7F4D2F27F5B3423A /* AgendaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgendaViewController.swift; sourceTree = "<group>"; };
 		97D5E7DA621584D0C2C37C86 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		A162F1541BEA992400262528 /* TDDWorkshop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TDDWorkshop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A162F1571BEA992400262528 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -47,12 +51,6 @@
 		A162F1681BEA992400262528 /* TDDWorkshopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TDDWorkshopTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A162F16C1BEA992400262528 /* TDDWorkshopTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDDWorkshopTests.swift; sourceTree = "<group>"; };
 		A162F16E1BEA992400262528 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A162F18A1BEA9A8700262528 /* AgendaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AgendaViewController.swift; path = Classes/Agenda/AgendaViewController.swift; sourceTree = "<group>"; };
-		A162F18D1BEA9A9200262528 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Colors.swift; path = Classes/Utils/Colors.swift; sourceTree = "<group>"; };
-		A162F18F1BEA9A9800262528 /* PhotoStreamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoStreamViewController.swift; path = Classes/PhotoStream/PhotoStreamViewController.swift; sourceTree = "<group>"; };
-		A162F1911BEA9A9E00262528 /* SpeakersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpeakersViewController.swift; path = Classes/Speakers/SpeakersViewController.swift; sourceTree = "<group>"; };
-		A162F1931BEA9AA400262528 /* PollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PollViewController.swift; path = Classes/Poll/PollViewController.swift; sourceTree = "<group>"; };
-		A1DFDFA21BF38292007D3C33 /* PollManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PollManager.swift; sourceTree = "<group>"; };
 		DB38C724F8850303F0A99848 /* Pods-TDDWorkshopTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TDDWorkshopTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TDDWorkshopTests/Pods-TDDWorkshopTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -76,6 +74,58 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		51043000362A8282ED7E7E2C /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				5104324D836308F5C548BAB5 /* Poll */,
+				51043AA44A4F8825A52B6EF1 /* Utils */,
+				510430A8ECF21562827F698F /* Agenda */,
+				510433A7A8EEDF416734678C /* Speakers */,
+				51043E96D27B210A13FF45AE /* PhotoStream */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		510430A8ECF21562827F698F /* Agenda */ = {
+			isa = PBXGroup;
+			children = (
+				5104375B7F4D2F27F5B3423A /* AgendaViewController.swift */,
+			);
+			path = Agenda;
+			sourceTree = "<group>";
+		};
+		5104324D836308F5C548BAB5 /* Poll */ = {
+			isa = PBXGroup;
+			children = (
+				510430AFBBDF3557A5D8AF14 /* PollViewController.swift */,
+			);
+			path = Poll;
+			sourceTree = "<group>";
+		};
+		510433A7A8EEDF416734678C /* Speakers */ = {
+			isa = PBXGroup;
+			children = (
+				510435EDEF61D28A105D11FC /* SpeakersViewController.swift */,
+			);
+			path = Speakers;
+			sourceTree = "<group>";
+		};
+		51043AA44A4F8825A52B6EF1 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				51043554A6BA672E01979F0C /* Colors.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		51043E96D27B210A13FF45AE /* PhotoStream */ = {
+			isa = PBXGroup;
+			children = (
+				510437064268061B024AFB34 /* PhotoStreamViewController.swift */,
+			);
+			path = PhotoStream;
+			sourceTree = "<group>";
+		};
 		52167ECFE43C8E6C67FC2498 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -110,12 +160,12 @@
 		A162F1561BEA992400262528 /* TDDWorkshop */ = {
 			isa = PBXGroup;
 			children = (
-				A162F1851BEA9A5400262528 /* Classes */,
 				A162F1571BEA992400262528 /* AppDelegate.swift */,
 				A162F15B1BEA992400262528 /* Main.storyboard */,
 				A162F15E1BEA992400262528 /* Assets.xcassets */,
 				A162F1601BEA992400262528 /* LaunchScreen.storyboard */,
 				A162F1631BEA992400262528 /* Info.plist */,
+				51043000362A8282ED7E7E2C /* Classes */,
 			);
 			path = TDDWorkshop;
 			sourceTree = "<group>";
@@ -127,59 +177,6 @@
 				A162F16E1BEA992400262528 /* Info.plist */,
 			);
 			path = TDDWorkshopTests;
-			sourceTree = "<group>";
-		};
-		A162F1851BEA9A5400262528 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				A162F18C1BEA9A8A00262528 /* Utils */,
-				A162F1891BEA9A7C00262528 /* PhotoStream */,
-				A162F1881BEA9A6700262528 /* Speakers */,
-				A162F1871BEA9A6200262528 /* Poll */,
-				A162F1861BEA9A5C00262528 /* Agenda */,
-			);
-			name = Classes;
-			sourceTree = "<group>";
-		};
-		A162F1861BEA9A5C00262528 /* Agenda */ = {
-			isa = PBXGroup;
-			children = (
-				A162F18A1BEA9A8700262528 /* AgendaViewController.swift */,
-			);
-			name = Agenda;
-			sourceTree = "<group>";
-		};
-		A162F1871BEA9A6200262528 /* Poll */ = {
-			isa = PBXGroup;
-			children = (
-				A162F1931BEA9AA400262528 /* PollViewController.swift */,
-				A1DFDFA21BF38292007D3C33 /* PollManager.swift */,
-			);
-			name = Poll;
-			sourceTree = "<group>";
-		};
-		A162F1881BEA9A6700262528 /* Speakers */ = {
-			isa = PBXGroup;
-			children = (
-				A162F1911BEA9A9E00262528 /* SpeakersViewController.swift */,
-			);
-			name = Speakers;
-			sourceTree = "<group>";
-		};
-		A162F1891BEA9A7C00262528 /* PhotoStream */ = {
-			isa = PBXGroup;
-			children = (
-				A162F18F1BEA9A9800262528 /* PhotoStreamViewController.swift */,
-			);
-			name = PhotoStream;
-			sourceTree = "<group>";
-		};
-		A162F18C1BEA9A8A00262528 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				A162F18D1BEA9A9200262528 /* Colors.swift */,
-			);
-			name = Utils;
 			sourceTree = "<group>";
 		};
 		FDBDE9B8D8F47B7D32B92655 /* Frameworks */ = {
@@ -391,13 +388,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1DFDFA31BF38292007D3C33 /* PollManager.swift in Sources */,
-				A162F18B1BEA9A8700262528 /* AgendaViewController.swift in Sources */,
-				A162F1941BEA9AA400262528 /* PollViewController.swift in Sources */,
-				A162F18E1BEA9A9200262528 /* Colors.swift in Sources */,
 				A162F1581BEA992400262528 /* AppDelegate.swift in Sources */,
-				A162F1921BEA9A9E00262528 /* SpeakersViewController.swift in Sources */,
-				A162F1901BEA9A9800262528 /* PhotoStreamViewController.swift in Sources */,
+				51043677CCD46E1C3EB6E004 /* PollViewController.swift in Sources */,
+				51043027EBDFCEFE5D0A73F1 /* Colors.swift in Sources */,
+				51043771E48EF9925E8EF8AD /* AgendaViewController.swift in Sources */,
+				51043A3EF7C3974F1615271B /* SpeakersViewController.swift in Sources */,
+				51043A0C439E7A3453F73B18 /* PhotoStreamViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
