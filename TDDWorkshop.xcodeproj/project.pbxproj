@@ -8,10 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		51043027EBDFCEFE5D0A73F1 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51043554A6BA672E01979F0C /* Colors.swift */; };
+		510430B6C0CDE99C22E463B9 /* StreamItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51043965731D049BEFDA67AC /* StreamItemViewController.swift */; };
+		51043170B138F85CA2F8AABF /* StreamItemCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510433D1B42097AB77025094 /* StreamItemCreator.swift */; };
 		51043677CCD46E1C3EB6E004 /* PollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510430AFBBDF3557A5D8AF14 /* PollViewController.swift */; };
 		51043771E48EF9925E8EF8AD /* AgendaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5104375B7F4D2F27F5B3423A /* AgendaViewController.swift */; };
+		5104389B3A339A2B861CAFEA /* StreamItemDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510438463E71DDBDF78EC29A /* StreamItemDownloader.swift */; };
 		51043A0C439E7A3453F73B18 /* PhotoStreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510437064268061B024AFB34 /* PhotoStreamViewController.swift */; };
 		51043A3EF7C3974F1615271B /* SpeakersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510435EDEF61D28A105D11FC /* SpeakersViewController.swift */; };
+		51043B0DF5696D6928B5DFA8 /* StreamItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510434C8892F259FA56BBF60 /* StreamItem.swift */; };
+		51043BBCC8A7FA2100EFE659 /* StreamItemUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51043C337BBCBCDD780EDE19 /* StreamItemUploader.swift */; };
 		51043C751412DCF7028CA6F7 /* PhotoStreamViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51043D867CB9F601F3B2D7B0 /* PhotoStreamViewControllerSpec.swift */; };
 		81DC540A880D1280C51754B0 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08C13977E91D5A6246EC94A4 /* Pods.framework */; };
 		A162F1581BEA992400262528 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A162F1571BEA992400262528 /* AppDelegate.swift */; };
@@ -39,10 +44,16 @@
 		2E9205E1648BE5EFF553320D /* Pods-TDDWorkshopTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TDDWorkshopTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TDDWorkshopTests/Pods-TDDWorkshopTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4FB712EE2487B0C9E9FE5485 /* Pods_TDDWorkshopTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TDDWorkshopTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		510430AFBBDF3557A5D8AF14 /* PollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PollViewController.swift; sourceTree = "<group>"; };
+		510433D1B42097AB77025094 /* StreamItemCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamItemCreator.swift; sourceTree = "<group>"; };
+		510434C8892F259FA56BBF60 /* StreamItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamItem.swift; sourceTree = "<group>"; };
+		510435299857472CE33443DB /* TDDWorkshop-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TDDWorkshop-Bridging-Header.h"; sourceTree = "<group>"; };
 		51043554A6BA672E01979F0C /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		510435EDEF61D28A105D11FC /* SpeakersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeakersViewController.swift; sourceTree = "<group>"; };
 		510437064268061B024AFB34 /* PhotoStreamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoStreamViewController.swift; sourceTree = "<group>"; };
 		5104375B7F4D2F27F5B3423A /* AgendaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgendaViewController.swift; sourceTree = "<group>"; };
+		510438463E71DDBDF78EC29A /* StreamItemDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamItemDownloader.swift; sourceTree = "<group>"; };
+		51043965731D049BEFDA67AC /* StreamItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamItemViewController.swift; sourceTree = "<group>"; };
+		51043C337BBCBCDD780EDE19 /* StreamItemUploader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamItemUploader.swift; sourceTree = "<group>"; };
 		51043D867CB9F601F3B2D7B0 /* PhotoStreamViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoStreamViewControllerSpec.swift; sourceTree = "<group>"; };
 		97D5E7DA621584D0C2C37C86 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		A162F1541BEA992400262528 /* TDDWorkshop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TDDWorkshop.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,6 +109,14 @@
 			path = Agenda;
 			sourceTree = "<group>";
 		};
+		510431123191A7C84DB2D581 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				51043965731D049BEFDA67AC /* StreamItemViewController.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		5104324D836308F5C548BAB5 /* Poll */ = {
 			isa = PBXGroup;
 			children = (
@@ -123,11 +142,24 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		51043C83C92809AB57E1A480 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				510434C8892F259FA56BBF60 /* StreamItem.swift */,
+				510438463E71DDBDF78EC29A /* StreamItemDownloader.swift */,
+				51043C337BBCBCDD780EDE19 /* StreamItemUploader.swift */,
+				510433D1B42097AB77025094 /* StreamItemCreator.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		51043E96D27B210A13FF45AE /* PhotoStream */ = {
 			isa = PBXGroup;
 			children = (
 				510437064268061B024AFB34 /* PhotoStreamViewController.swift */,
 				51043D867CB9F601F3B2D7B0 /* PhotoStreamViewControllerSpec.swift */,
+				51043C83C92809AB57E1A480 /* Model */,
+				510431123191A7C84DB2D581 /* UI */,
 			);
 			path = PhotoStream;
 			sourceTree = "<group>";
@@ -172,6 +204,7 @@
 				A162F1601BEA992400262528 /* LaunchScreen.storyboard */,
 				A162F1631BEA992400262528 /* Info.plist */,
 				51043000362A8282ED7E7E2C /* Classes */,
+				510435299857472CE33443DB /* TDDWorkshop-Bridging-Header.h */,
 			);
 			path = TDDWorkshop;
 			sourceTree = "<group>";
@@ -401,6 +434,11 @@
 				51043771E48EF9925E8EF8AD /* AgendaViewController.swift in Sources */,
 				51043A3EF7C3974F1615271B /* SpeakersViewController.swift in Sources */,
 				51043A0C439E7A3453F73B18 /* PhotoStreamViewController.swift in Sources */,
+				51043B0DF5696D6928B5DFA8 /* StreamItem.swift in Sources */,
+				5104389B3A339A2B861CAFEA /* StreamItemDownloader.swift in Sources */,
+				51043BBCC8A7FA2100EFE659 /* StreamItemUploader.swift in Sources */,
+				51043170B138F85CA2F8AABF /* StreamItemCreator.swift in Sources */,
+				510430B6C0CDE99C22E463B9 /* StreamItemViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -533,6 +571,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "io.mobile-academy.TDDWorkshop";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "${SRCROOT}/${PRODUCT_NAME}/TDDWorkshop-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -545,6 +584,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "io.mobile-academy.TDDWorkshop";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "${SRCROOT}/${PRODUCT_NAME}/TDDWorkshop-Bridging-Header.h";
 			};
 			name = Release;
 		};
