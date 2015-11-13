@@ -1,10 +1,7 @@
 //
-//  AgendaViewController.swift
-//  TDD Workshop
-//
-//  Created by Maciej Oczko on 03.07.2015.
 //  Copyright © 2015 Mobile Academy. All rights reserved.
 //
+
 
 import UIKit
 
