@@ -8,13 +8,14 @@ class PhotoStreamViewController: UIViewController {
 
     let parseAdapter = ParseAdapter()
     var downloader: StreamItemDownloader?
+    var creator: StreamItemCreator?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        downloader = StreamItemDownloader(parseAdapter: parseAdapter)
-//        downloader.downloadItems {items, error in
+        downloader = StreamItemDownloader(parseAdapter: parseAdapter)
+        creator = StreamItemCreator(presenter: DefaultViewControllerPresenter(viewController: self))
 
-        }
+    }
 }
 
 

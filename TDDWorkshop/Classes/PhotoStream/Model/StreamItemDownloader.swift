@@ -10,13 +10,17 @@ class StreamItemDownloader {
     let parseAdapter: ParseAdapter
     var transformer = StreamItemTransformer()
 
+    //MARK: Object Life Cycle
+
     init(parseAdapter: ParseAdapter) {
         self.parseAdapter = parseAdapter
     }
 
+    //MARK: Public methods
+
     func downloadItems(completion: ([StreamItem]?, ErrorType?) -> ()) {
 
-        let query = PFQuery(className:"StreamItem")
+        let query = PFQuery(className:StreamItem.entityName)
 
         parseAdapter.executeQuery(query) {[weak self] objects, error in
             guard error == nil,

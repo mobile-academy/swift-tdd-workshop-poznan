@@ -8,8 +8,12 @@ import Parse
 
 class StreamItemTransformer {
 
+    //MARK: Constants
+
     let TitleKey = "title"
     let ImageDataKey = "image-data"
+
+    //MARK: Public methods
 
     func streamItemFromParseObject(parseObject: PFObject) -> StreamItem? {
         guard let title = parseObject[TitleKey] as? String,
@@ -20,7 +24,7 @@ class StreamItemTransformer {
     }
 
     func parseObjectFromStreamItem(streamItem: StreamItem) -> PFObject {
-        let object = PFObject(className: "StreamItem")
+        let object = PFObject(className: StreamItem.entityName)
         object[TitleKey] = streamItem.title
         object[ImageDataKey] = streamItem.imageData
         return object

@@ -9,6 +9,8 @@ class StreamItem {
     var title: String
     var imageData: NSData
 
+    static let entityName = "StreamItem"
+
     init(title: String, imageData: NSData) {
         self.title = title
         self.imageData = imageData

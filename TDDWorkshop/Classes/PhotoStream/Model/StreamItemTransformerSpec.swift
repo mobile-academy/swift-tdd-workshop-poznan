@@ -18,7 +18,7 @@ class StreamItemTransformerSpec: QuickSpec {
             describe("transform stream item into Parse object") {
                 var parseObject: PFObject!
                 var streamItem: StreamItem!
-                var fakeImageData = NSData()
+                let fakeImageData = NSData()
 
                 beforeEach {
                     streamItem = StreamItem(title: "Foo 123", imageData: fakeImageData)
@@ -39,11 +39,11 @@ class StreamItemTransformerSpec: QuickSpec {
             describe("transform parse object into Stream Item") {
                 var streamItem : StreamItem?
                 var parseObject : PFObject!
-                var fakeImageData = NSData()
+                let fakeImageData = NSData()
 
                 beforeEach {
                     streamItem = nil
-                    parseObject = PFObject(className: "StreamItem")
+                    parseObject = PFObject(className: StreamItem.entityName)
                 }
                 context("when it has title and image data") {
                     beforeEach {

@@ -40,7 +40,7 @@ class StreamItemDownloaderSpec: QuickSpec {
 
                 context("when succeeds and completion is called") {
                     beforeEach {
-                        let exampleObject = PFObject(className: "StreamItem")
+                        let exampleObject = PFObject(className: StreamItem.entityName)
                         exampleObject["title"] = "Foo"
                         exampleObject["image-data"] = NSData()
                         parseAdapter.capturedQueryCompletion?([exampleObject], nil)
