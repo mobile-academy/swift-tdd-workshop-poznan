@@ -4,7 +4,7 @@
 
 import Foundation
 
-class ConifugrationFactory {
+class ConfigurationFactory {
 
     func applicationConfiguration() -> Configuration {
         return Configuration(parseApplicationID:"sIPyctgvrkwcFIpXRdt9nSdZUPVEgJY79UGNmhYO",
