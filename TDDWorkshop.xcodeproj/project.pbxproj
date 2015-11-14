@@ -12,6 +12,8 @@
 		510430B6C0CDE99C22E463B9 /* StreamItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51043965731D049BEFDA67AC /* StreamItemViewController.swift */; };
 		51043121927C1E86982B46CC /* Configurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51043F88A84283ECD6996069 /* Configurator.swift */; };
 		51043170B138F85CA2F8AABF /* StreamItemCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510433D1B42097AB77025094 /* StreamItemCreator.swift */; };
+		5104323CC37CC71D3C4951F5 /* StreamItemTransformerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510434BBBC65EA473F7F8CAB /* StreamItemTransformerSpec.swift */; };
+		510433644ECD8A3EB3E739E9 /* ParseAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51043AA6F615034F37D5F271 /* ParseAdapter.swift */; };
 		51043605C18A362FF71BEC8E /* StreamItemDownloaderSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51043992847AFBB2B320921D /* StreamItemDownloaderSpec.swift */; };
 		51043677CCD46E1C3EB6E004 /* PollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510430AFBBDF3557A5D8AF14 /* PollViewController.swift */; };
 		510436B2B0F419B81E1D35CA /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51043B621FA473AFA12F742A /* Configuration.swift */; };
@@ -19,10 +21,13 @@
 		5104389B3A339A2B861CAFEA /* StreamItemDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510438463E71DDBDF78EC29A /* StreamItemDownloader.swift */; };
 		51043A0C439E7A3453F73B18 /* PhotoStreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510437064268061B024AFB34 /* PhotoStreamViewController.swift */; };
 		51043A3EF7C3974F1615271B /* SpeakersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510435EDEF61D28A105D11FC /* SpeakersViewController.swift */; };
+		51043B08EC646440A8F60810 /* ParseAdapterFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51043767FCF386A030DE1E73 /* ParseAdapterFake.swift */; };
 		51043B0DF5696D6928B5DFA8 /* StreamItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510434C8892F259FA56BBF60 /* StreamItem.swift */; };
 		51043BBCC8A7FA2100EFE659 /* StreamItemUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51043C337BBCBCDD780EDE19 /* StreamItemUploader.swift */; };
+		51043C19A4A903FCBA7C795E /* StreamItemUploaderSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510439024D3A16644453FBF5 /* StreamItemUploaderSpec.swift */; };
 		51043C751412DCF7028CA6F7 /* PhotoStreamViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51043D867CB9F601F3B2D7B0 /* PhotoStreamViewControllerSpec.swift */; };
 		51043F404C0E2D0414BAE37D /* ConfigurationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51043A835228933A3BC4F56F /* ConfigurationFactory.swift */; };
+		51043FF50D487EE58AB2ECC9 /* StreamItemTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51043DF90B2B0152DF6FF46B /* StreamItemTransformer.swift */; };
 		81DC540A880D1280C51754B0 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08C13977E91D5A6246EC94A4 /* Pods.framework */; };
 		A1DFDFA51BF3D126007D3C33 /* PollManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DFDFA41BF3D126007D3C33 /* PollManager.swift */; };
 		B27A91BCFEE01D5302624425 /* Speaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27A97ECFEB155F0C61B235C /* Speaker.swift */; };
@@ -56,18 +61,23 @@
 		4FB712EE2487B0C9E9FE5485 /* Pods_TDDWorkshopTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TDDWorkshopTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		510430AFBBDF3557A5D8AF14 /* PollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PollViewController.swift; sourceTree = "<group>"; };
 		510433D1B42097AB77025094 /* StreamItemCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamItemCreator.swift; sourceTree = "<group>"; };
+		510434BBBC65EA473F7F8CAB /* StreamItemTransformerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamItemTransformerSpec.swift; sourceTree = "<group>"; };
 		510434C8892F259FA56BBF60 /* StreamItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamItem.swift; sourceTree = "<group>"; };
 		51043554A6BA672E01979F0C /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		510435EDEF61D28A105D11FC /* SpeakersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeakersViewController.swift; sourceTree = "<group>"; };
 		510437064268061B024AFB34 /* PhotoStreamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoStreamViewController.swift; sourceTree = "<group>"; };
 		5104375B7F4D2F27F5B3423A /* AgendaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgendaViewController.swift; sourceTree = "<group>"; };
+		51043767FCF386A030DE1E73 /* ParseAdapterFake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseAdapterFake.swift; sourceTree = "<group>"; };
 		510438463E71DDBDF78EC29A /* StreamItemDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamItemDownloader.swift; sourceTree = "<group>"; };
+		510439024D3A16644453FBF5 /* StreamItemUploaderSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamItemUploaderSpec.swift; sourceTree = "<group>"; };
 		51043965731D049BEFDA67AC /* StreamItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamItemViewController.swift; sourceTree = "<group>"; };
 		51043992847AFBB2B320921D /* StreamItemDownloaderSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamItemDownloaderSpec.swift; sourceTree = "<group>"; };
 		51043A835228933A3BC4F56F /* ConfigurationFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationFactory.swift; sourceTree = "<group>"; };
+		51043AA6F615034F37D5F271 /* ParseAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseAdapter.swift; sourceTree = "<group>"; };
 		51043B621FA473AFA12F742A /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		51043C337BBCBCDD780EDE19 /* StreamItemUploader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamItemUploader.swift; sourceTree = "<group>"; };
 		51043D867CB9F601F3B2D7B0 /* PhotoStreamViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoStreamViewControllerSpec.swift; sourceTree = "<group>"; };
+		51043DF90B2B0152DF6FF46B /* StreamItemTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamItemTransformer.swift; sourceTree = "<group>"; };
 		51043F88A84283ECD6996069 /* Configurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configurator.swift; sourceTree = "<group>"; };
 		97D5E7DA621584D0C2C37C86 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		A162F1541BEA992400262528 /* TDDWorkshop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TDDWorkshop.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,6 +135,14 @@
 			path = Classes;
 			sourceTree = "<group>";
 		};
+		510430A69A66EA01DF50363F /* Fakes */ = {
+			isa = PBXGroup;
+			children = (
+				51043767FCF386A030DE1E73 /* ParseAdapterFake.swift */,
+			);
+			path = Fakes;
+			sourceTree = "<group>";
+		};
 		510430A8ECF21562827F698F /* Agenda */ = {
 			isa = PBXGroup;
 			children = (
@@ -163,6 +181,13 @@
 			path = Speakers;
 			sourceTree = "<group>";
 		};
+		510437E2B6F63A2F982B2A50 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		51043A28211AD67BE6A8843D /* App Configuration */ = {
 			isa = PBXGroup;
 			children = (
@@ -189,6 +214,10 @@
 				51043C337BBCBCDD780EDE19 /* StreamItemUploader.swift */,
 				510433D1B42097AB77025094 /* StreamItemCreator.swift */,
 				51043992847AFBB2B320921D /* StreamItemDownloaderSpec.swift */,
+				51043AA6F615034F37D5F271 /* ParseAdapter.swift */,
+				51043DF90B2B0152DF6FF46B /* StreamItemTransformer.swift */,
+				510439024D3A16644453FBF5 /* StreamItemUploaderSpec.swift */,
+				510434BBBC65EA473F7F8CAB /* StreamItemTransformerSpec.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -249,6 +278,8 @@
 			isa = PBXGroup;
 			children = (
 				A162F16E1BEA992400262528 /* Info.plist */,
+				510437E2B6F63A2F982B2A50 /* Helpers */,
+				510430A69A66EA01DF50363F /* Fakes */,
 			);
 			path = TDDWorkshopTests;
 			sourceTree = "<group>";
@@ -537,6 +568,8 @@
 				510436B2B0F419B81E1D35CA /* Configuration.swift in Sources */,
 				51043F404C0E2D0414BAE37D /* ConfigurationFactory.swift in Sources */,
 				51043121927C1E86982B46CC /* Configurator.swift in Sources */,
+				510433644ECD8A3EB3E739E9 /* ParseAdapter.swift in Sources */,
+				51043FF50D487EE58AB2ECC9 /* StreamItemTransformer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -548,6 +581,9 @@
 				B27A9D82F37544CEEAC47248 /* SpeakersViewControllerSpec.swift in Sources */,
 				B27A9435A5125ABF50C02EB4 /* SpeakersCollectionViewDataSourceSpec.swift in Sources */,
 				51043605C18A362FF71BEC8E /* StreamItemDownloaderSpec.swift in Sources */,
+				51043B08EC646440A8F60810 /* ParseAdapterFake.swift in Sources */,
+				51043C19A4A903FCBA7C795E /* StreamItemUploaderSpec.swift in Sources */,
+				5104323CC37CC71D3C4951F5 /* StreamItemTransformerSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -3,26 +3,35 @@
 //
 
 import Foundation
-
-protocol Query {}
-
-protocol QueryResult {}
-
-protocol QueryExecutor {
-    func executeQuery(query: Query, completion:(QueryResult) -> ()) throws
-}
+import Parse
 
 class StreamItemDownloader {
 
-    var queryExecutor: QueryExecutor
+    let parseAdapter: ParseAdapter
+    var transformer = StreamItemTransformer()
 
-    init(queryExecutor: QueryExecutor) {
-        self.queryExecutor = queryExecutor
+    init(parseAdapter: ParseAdapter) {
+        self.parseAdapter = parseAdapter
     }
 
-    func downloadItems(completion: ([StreamItem]) -> ()) throws {
-        //TODO create Parse query
-        //TODO execute
-        //TODO transform response to stream items
+    func downloadItems(completion: ([StreamItem]?, ErrorType?) -> ()) {
+
+        let query = PFQuery(className:"StreamItem")
+
+        parseAdapter.executeQuery(query) {[weak self] objects, error in
+            guard error == nil,
+            let parseObjects = objects else  {
+                completion(nil, error)
+                return
+            }
+            var streamItems = [StreamItem]()
+            for object in parseObjects {
+                if let streamItem = self?.transformer.streamItemFromParseObject(object) {
+                    streamItems.append(streamItem)
+                }
+            }
+            completion(streamItems, nil)
+        }
     }
+
 }

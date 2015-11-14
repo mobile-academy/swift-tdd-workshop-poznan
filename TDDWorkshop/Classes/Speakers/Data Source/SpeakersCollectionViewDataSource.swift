@@ -3,7 +3,7 @@
 //
 
 import Foundation
-
+import UIKit
 
 @objc class SpeakersCollectionViewDataSource: NSObject, UICollectionViewDataSource {
 

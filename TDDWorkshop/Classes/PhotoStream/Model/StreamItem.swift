@@ -7,11 +7,16 @@ import UIKit
 
 class StreamItem {
     var title: String
-    var image: UIImage
+    var imageData: NSData
 
-    init(title: String, image: UIImage) {
+    init(title: String, imageData: NSData) {
         self.title = title
-        self.image = image
+        self.imageData = imageData
     }
+}
 
+extension StreamItem {
+    func image() -> UIImage? {
+        return UIImage(data: imageData)
+    }
 }

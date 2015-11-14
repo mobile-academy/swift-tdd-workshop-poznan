@@ -38,7 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func configureApplication(launchOptions: [NSObject: AnyObject]?) {
         let configurator = Configurator()
         let appConfiguration = ConfigurationFactory().applicationConfiguration()
-        configurator.configureApplication(appConfiguration, launchOptions)
+        configurator.configureApplication(appConfiguration, launchOptions: launchOptions)
     }
 }
 

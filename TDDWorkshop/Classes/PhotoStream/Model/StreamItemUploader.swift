@@ -6,7 +6,15 @@ import Foundation
 
 class StreamItemUploader {
 
-    func uploadItem(streamItem: StreamItem) throws {
-        
+    let parseAdapter: ParseAdapter
+    var transformer = StreamItemTransformer()
+
+    init (parseAdapter: ParseAdapter) {
+        self.parseAdapter = parseAdapter
+    }
+
+    func uploadItem(streamItem: StreamItem, completion: (Bool, ErrorType?) -> ()) {
+        let parseObject = transformer.parseObjectFromStreamItem(streamItem)
+        parseAdapter.uploadObject(parseObject, completion: completion)
     }
 }

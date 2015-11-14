@@ -3,11 +3,12 @@
 //
 
 import Foundation
+import Parse
 
 class Configurator {
 
     func configureApplication(configuration: Configuration, launchOptions: [NSObject: AnyObject]?) {
-        Parse.setApplicationId(configuration.parseApplicationID, configuration.parseClientID)
+        Parse.setApplicationId(configuration.parseApplicationID, clientKey: configuration.parseClientID)
         PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
     }
 }
