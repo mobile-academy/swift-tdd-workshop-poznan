@@ -11,6 +11,7 @@
 		51043027EBDFCEFE5D0A73F1 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51043554A6BA672E01979F0C /* Colors.swift */; };
 		510430B6C0CDE99C22E463B9 /* StreamItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51043965731D049BEFDA67AC /* StreamItemViewController.swift */; };
 		51043170B138F85CA2F8AABF /* StreamItemCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510433D1B42097AB77025094 /* StreamItemCreator.swift */; };
+		51043605C18A362FF71BEC8E /* StreamItemDownloaderSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51043992847AFBB2B320921D /* StreamItemDownloaderSpec.swift */; };
 		51043677CCD46E1C3EB6E004 /* PollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510430AFBBDF3557A5D8AF14 /* PollViewController.swift */; };
 		51043771E48EF9925E8EF8AD /* AgendaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5104375B7F4D2F27F5B3423A /* AgendaViewController.swift */; };
 		5104389B3A339A2B861CAFEA /* StreamItemDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510438463E71DDBDF78EC29A /* StreamItemDownloader.swift */; };
@@ -59,6 +60,7 @@
 		5104375B7F4D2F27F5B3423A /* AgendaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgendaViewController.swift; sourceTree = "<group>"; };
 		510438463E71DDBDF78EC29A /* StreamItemDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamItemDownloader.swift; sourceTree = "<group>"; };
 		51043965731D049BEFDA67AC /* StreamItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamItemViewController.swift; sourceTree = "<group>"; };
+		51043992847AFBB2B320921D /* StreamItemDownloaderSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamItemDownloaderSpec.swift; sourceTree = "<group>"; };
 		51043C337BBCBCDD780EDE19 /* StreamItemUploader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamItemUploader.swift; sourceTree = "<group>"; };
 		51043D867CB9F601F3B2D7B0 /* PhotoStreamViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoStreamViewControllerSpec.swift; sourceTree = "<group>"; };
 		97D5E7DA621584D0C2C37C86 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 				510438463E71DDBDF78EC29A /* StreamItemDownloader.swift */,
 				51043C337BBCBCDD780EDE19 /* StreamItemUploader.swift */,
 				510433D1B42097AB77025094 /* StreamItemCreator.swift */,
+				51043992847AFBB2B320921D /* StreamItemDownloaderSpec.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -524,6 +527,7 @@
 				51043C751412DCF7028CA6F7 /* PhotoStreamViewControllerSpec.swift in Sources */,
 				B27A9D82F37544CEEAC47248 /* SpeakersViewControllerSpec.swift in Sources */,
 				B27A9435A5125ABF50C02EB4 /* SpeakersCollectionViewDataSourceSpec.swift in Sources */,
+				51043605C18A362FF71BEC8E /* StreamItemDownloaderSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -5,4 +5,8 @@
 import Foundation
 
 class StreamItemUploader {
+
+    func uploadItem(streamItem: StreamItem) throws {
+        
+    }
 }
