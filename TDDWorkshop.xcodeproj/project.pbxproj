@@ -10,9 +10,11 @@
 		43FA23BF1BF8811900A5AD35 /* SpeakersCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27A9F0CC5F26F99BDEC1E9D /* SpeakersCollectionViewLayout.swift */; };
 		51043027EBDFCEFE5D0A73F1 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51043554A6BA672E01979F0C /* Colors.swift */; };
 		510430B6C0CDE99C22E463B9 /* StreamItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51043965731D049BEFDA67AC /* StreamItemViewController.swift */; };
+		51043121927C1E86982B46CC /* Configurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51043F88A84283ECD6996069 /* Configurator.swift */; };
 		51043170B138F85CA2F8AABF /* StreamItemCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510433D1B42097AB77025094 /* StreamItemCreator.swift */; };
 		51043605C18A362FF71BEC8E /* StreamItemDownloaderSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51043992847AFBB2B320921D /* StreamItemDownloaderSpec.swift */; };
 		51043677CCD46E1C3EB6E004 /* PollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510430AFBBDF3557A5D8AF14 /* PollViewController.swift */; };
+		510436B2B0F419B81E1D35CA /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51043B621FA473AFA12F742A /* Configuration.swift */; };
 		51043771E48EF9925E8EF8AD /* AgendaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5104375B7F4D2F27F5B3423A /* AgendaViewController.swift */; };
 		5104389B3A339A2B861CAFEA /* StreamItemDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510438463E71DDBDF78EC29A /* StreamItemDownloader.swift */; };
 		51043A0C439E7A3453F73B18 /* PhotoStreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510437064268061B024AFB34 /* PhotoStreamViewController.swift */; };
@@ -20,6 +22,7 @@
 		51043B0DF5696D6928B5DFA8 /* StreamItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510434C8892F259FA56BBF60 /* StreamItem.swift */; };
 		51043BBCC8A7FA2100EFE659 /* StreamItemUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51043C337BBCBCDD780EDE19 /* StreamItemUploader.swift */; };
 		51043C751412DCF7028CA6F7 /* PhotoStreamViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51043D867CB9F601F3B2D7B0 /* PhotoStreamViewControllerSpec.swift */; };
+		51043F404C0E2D0414BAE37D /* ConifugrationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51043A835228933A3BC4F56F /* ConifugrationFactory.swift */; };
 		81DC540A880D1280C51754B0 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08C13977E91D5A6246EC94A4 /* Pods.framework */; };
 		A1DFDFA51BF3D126007D3C33 /* PollManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DFDFA41BF3D126007D3C33 /* PollManager.swift */; };
 		B27A91BCFEE01D5302624425 /* Speaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27A97ECFEB155F0C61B235C /* Speaker.swift */; };
@@ -61,8 +64,11 @@
 		510438463E71DDBDF78EC29A /* StreamItemDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamItemDownloader.swift; sourceTree = "<group>"; };
 		51043965731D049BEFDA67AC /* StreamItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamItemViewController.swift; sourceTree = "<group>"; };
 		51043992847AFBB2B320921D /* StreamItemDownloaderSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamItemDownloaderSpec.swift; sourceTree = "<group>"; };
+		51043A835228933A3BC4F56F /* ConifugrationFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConifugrationFactory.swift; sourceTree = "<group>"; };
+		51043B621FA473AFA12F742A /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		51043C337BBCBCDD780EDE19 /* StreamItemUploader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamItemUploader.swift; sourceTree = "<group>"; };
 		51043D867CB9F601F3B2D7B0 /* PhotoStreamViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoStreamViewControllerSpec.swift; sourceTree = "<group>"; };
+		51043F88A84283ECD6996069 /* Configurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configurator.swift; sourceTree = "<group>"; };
 		97D5E7DA621584D0C2C37C86 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		A162F1541BEA992400262528 /* TDDWorkshop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TDDWorkshop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A162F1681BEA992400262528 /* TDDWorkshopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TDDWorkshopTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,6 +120,7 @@
 				510433A7A8EEDF416734678C /* Speakers */,
 				51043E96D27B210A13FF45AE /* PhotoStream */,
 				B27A9E63F868EFA7E3B1992D /* AppDelegate.swift */,
+				51043A28211AD67BE6A8843D /* App Configuration */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -154,6 +161,16 @@
 				B27A9BABBB936CB3E78D82AD /* Layout */,
 			);
 			path = Speakers;
+			sourceTree = "<group>";
+		};
+		51043A28211AD67BE6A8843D /* App Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				51043B621FA473AFA12F742A /* Configuration.swift */,
+				51043A835228933A3BC4F56F /* ConifugrationFactory.swift */,
+				51043F88A84283ECD6996069 /* Configurator.swift */,
+			);
+			path = "App Configuration";
 			sourceTree = "<group>";
 		};
 		51043AA44A4F8825A52B6EF1 /* Utils */ = {
@@ -517,6 +534,9 @@
 				B27A9D49C4908E6CD130E12C /* SpeakerCollectionViewCell.swift in Sources */,
 				43FA23BF1BF8811900A5AD35 /* SpeakersCollectionViewLayout.swift in Sources */,
 				B27A9FC130EC0A542BD236B0 /* SeparatorView.swift in Sources */,
+				510436B2B0F419B81E1D35CA /* Configuration.swift in Sources */,
+				51043F404C0E2D0414BAE37D /* ConifugrationFactory.swift in Sources */,
+				51043121927C1E86982B46CC /* Configurator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
