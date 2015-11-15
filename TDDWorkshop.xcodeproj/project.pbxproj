@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		43FA23BF1BF8811900A5AD35 /* SpeakersCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27A9F0CC5F26F99BDEC1E9D /* SpeakersCollectionViewLayout.swift */; };
 		51043027EBDFCEFE5D0A73F1 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51043554A6BA672E01979F0C /* Colors.swift */; };
 		510430B6C0CDE99C22E463B9 /* StreamItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51043965731D049BEFDA67AC /* StreamItemViewController.swift */; };
 		51043170B138F85CA2F8AABF /* StreamItemCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510433D1B42097AB77025094 /* StreamItemCreator.swift */; };
@@ -30,6 +31,7 @@
 		B27A9D82F37544CEEAC47248 /* SpeakersViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27A927D750AD170429319F9 /* SpeakersViewControllerSpec.swift */; };
 		B27A9E8094FBF30931726C0D /* speakers.JSON in Resources */ = {isa = PBXBuildFile; fileRef = B27A9E3539512E7DAFF90D81 /* speakers.JSON */; };
 		B27A9FA65FA206E5D57CF719 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B27A9F3DE55BB9681CE91770 /* Main.storyboard */; };
+		B27A9FC130EC0A542BD236B0 /* SeparatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27A97ECFB2BF14480743179 /* SeparatorView.swift */; };
 		FB406D92AC1B66A282B75006 /* Pods_TDDWorkshopTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FB712EE2487B0C9E9FE5485 /* Pods_TDDWorkshopTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +68,7 @@
 		A1DFDFA41BF3D126007D3C33 /* PollManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PollManager.swift; sourceTree = "<group>"; };
 		B27A91C4E7A0EF507D03444F /* SpeakersCollectionViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeakersCollectionViewDataSource.swift; sourceTree = "<group>"; };
 		B27A927D750AD170429319F9 /* SpeakersViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeakersViewControllerSpec.swift; sourceTree = "<group>"; };
+		B27A97ECFB2BF14480743179 /* SeparatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeparatorView.swift; sourceTree = "<group>"; };
 		B27A97ECFEB155F0C61B235C /* Speaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Speaker.swift; sourceTree = "<group>"; };
 		B27A99D35631967D320772EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = TDDWorkshop/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
 		B27A9A2BDE9A5AAB28769484 /* TDDWorkshop-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TDDWorkshop-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -76,6 +79,7 @@
 		B27A9E3539512E7DAFF90D81 /* speakers.JSON */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = speakers.JSON; sourceTree = "<group>"; };
 		B27A9E63F868EFA7E3B1992D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B27A9E90A1B7C06C761569D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = TDDWorkshop/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
+		B27A9F0CC5F26F99BDEC1E9D /* SpeakersCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeakersCollectionViewLayout.swift; sourceTree = "<group>"; };
 		DB38C724F8850303F0A99848 /* Pods-TDDWorkshopTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TDDWorkshopTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TDDWorkshopTests/Pods-TDDWorkshopTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -145,6 +149,7 @@
 				B27A95C8671D86045DD6C2CB /* Model */,
 				B27A98707F3D4EBF8D7602FC /* Data Source */,
 				B27A95B5E0385633C72D0912 /* View */,
+				B27A9BABBB936CB3E78D82AD /* Layout */,
 			);
 			path = Speakers;
 			sourceTree = "<group>";
@@ -241,6 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				B27A9DC5B146671A6A47AD0F /* SpeakerCollectionViewCell.swift */,
+				B27A97ECFB2BF14480743179 /* SeparatorView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -260,6 +266,14 @@
 				B27A9A9CFA5BBA8E9E675BF3 /* SpeakersCollectionViewDataSourceSpec.swift */,
 			);
 			path = "Data Source";
+			sourceTree = "<group>";
+		};
+		B27A9BABBB936CB3E78D82AD /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				B27A9F0CC5F26F99BDEC1E9D /* SpeakersCollectionViewLayout.swift */,
+			);
+			path = Layout;
 			sourceTree = "<group>";
 		};
 		B27A9C3F57A26C6CA9BC8695 /* Resources */ = {
@@ -498,6 +512,8 @@
 				B27A99B3A1E7CE3647CFE6D0 /* SpeakersCollectionViewDataSource.swift in Sources */,
 				B27A978F0B8D18365F720D8E /* AppDelegate.swift in Sources */,
 				B27A9D49C4908E6CD130E12C /* SpeakerCollectionViewCell.swift in Sources */,
+				43FA23BF1BF8811900A5AD35 /* SpeakersCollectionViewLayout.swift in Sources */,
+				B27A9FC130EC0A542BD236B0 /* SeparatorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

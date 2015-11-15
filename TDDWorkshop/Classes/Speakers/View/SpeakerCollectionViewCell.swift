@@ -18,6 +18,8 @@ class SpeakerCollectionViewCell : UICollectionViewCell {
         super.init(frame: frame)
         
         self.titleLabel.setContentHuggingPriority(UILayoutPriorityDefaultLow, forAxis: UILayoutConstraintAxis.Horizontal)
+        self.titleLabel.backgroundColor = UIColor.redColor()
+        self.imageView.backgroundColor = UIColor.greenColor()
 
         self.imageView.setContentHuggingPriority(UILayoutPriorityRequired, forAxis: UILayoutConstraintAxis.Horizontal)
         self.imageView.setContentCompressionResistancePriority(UILayoutPriorityRequired, forAxis: UILayoutConstraintAxis.Vertical)
@@ -25,7 +27,6 @@ class SpeakerCollectionViewCell : UICollectionViewCell {
         self.contentView.addSubview(self.titleLabel)
         self.contentView.addSubview(self.imageView)
 
-        self.backgroundColor = UIColor(white: 0.9, alpha: 1.0)
         self.titleLabel.textColor = UIColor.textColor()
 
         self.installConstraints()
@@ -42,8 +43,7 @@ class SpeakerCollectionViewCell : UICollectionViewCell {
         let views = ["title" : self.titleLabel, "image" : self.imageView]
 
         var constraints = NSLayoutConstraint.constraintsWithVisualFormat("|-(9)-[image]-(9)-[title]-|", options:[], metrics:nil, views:views)
-        NSLayoutConstraint.activateConstraints(constraints)
-        
+
         constraints.append(NSLayoutConstraint(item:self.titleLabel, attribute:NSLayoutAttribute.CenterY, relatedBy:NSLayoutRelation.Equal, toItem:self.contentView, attribute:NSLayoutAttribute.CenterY, multiplier:1, constant:0))
         constraints.append(NSLayoutConstraint(item:self.imageView, attribute:NSLayoutAttribute.CenterY, relatedBy:NSLayoutRelation.Equal, toItem:self.contentView, attribute:NSLayoutAttribute.CenterY, multiplier:1, constant:0))
 

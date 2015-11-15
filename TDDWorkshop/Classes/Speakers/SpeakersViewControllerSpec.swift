@@ -45,6 +45,10 @@ class SpeakersViewControllerSpec: QuickSpec {
                         layout = view?.collectionViewLayout as? UICollectionViewFlowLayout
                     }
 
+                    it("should be a flow layout") {
+                        expect(layout).to(beAKindOf(UICollectionViewFlowLayout))
+                    }
+
                     describe("when the view lays itself out") {
 
                         beforeEach {
