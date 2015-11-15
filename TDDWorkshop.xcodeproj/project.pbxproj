@@ -15,6 +15,8 @@
 		510431E1C6664364B83AB52E /* StreamItemCreatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510439BC04764BB07E409C37 /* StreamItemCreatorSpec.swift */; };
 		5104323CC37CC71D3C4951F5 /* StreamItemTransformerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510434BBBC65EA473F7F8CAB /* StreamItemTransformerSpec.swift */; };
 		51043256D33EC8DD17038E3E /* AlertActionFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510432A7D6CB6EADD41BB052 /* AlertActionFactory.swift */; };
+		510432EF963A2E1DACC4A437 /* PhotoStreamLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51043CFCB812DE53D6F3724E /* PhotoStreamLayout.swift */; };
+		5104335D5F77F482D00552FE /* PhotoStreamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51043E2525F90B539767A93B /* PhotoStreamCell.swift */; };
 		510433644ECD8A3EB3E739E9 /* ParseAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51043AA6F615034F37D5F271 /* ParseAdapter.swift */; };
 		510433D7B66CAEC82FEA523F /* ViewControllerPresenterFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510430DB72E766E5E4F649BB /* ViewControllerPresenterFake.swift */; };
 		51043605C18A362FF71BEC8E /* StreamItemDownloaderSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51043992847AFBB2B320921D /* StreamItemDownloaderSpec.swift */; };
@@ -99,9 +101,11 @@
 		51043B1632D8201C3B8C5CB0 /* ImagePickerFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickerFactory.swift; sourceTree = "<group>"; };
 		51043B621FA473AFA12F742A /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		51043C337BBCBCDD780EDE19 /* StreamItemUploader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamItemUploader.swift; sourceTree = "<group>"; };
+		51043CFCB812DE53D6F3724E /* PhotoStreamLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoStreamLayout.swift; sourceTree = "<group>"; };
 		51043D7141B91F0066822119 /* AlertActionFactoryFake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertActionFactoryFake.swift; sourceTree = "<group>"; };
 		51043D867CB9F601F3B2D7B0 /* PhotoStreamViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoStreamViewControllerSpec.swift; sourceTree = "<group>"; };
 		51043DF90B2B0152DF6FF46B /* StreamItemTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamItemTransformer.swift; sourceTree = "<group>"; };
+		51043E2525F90B539767A93B /* PhotoStreamCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoStreamCell.swift; sourceTree = "<group>"; };
 		51043F88A84283ECD6996069 /* Configurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configurator.swift; sourceTree = "<group>"; };
 		97D5E7DA621584D0C2C37C86 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		A162F1541BEA992400262528 /* TDDWorkshop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TDDWorkshop.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -265,6 +269,8 @@
 				51043D867CB9F601F3B2D7B0 /* PhotoStreamViewControllerSpec.swift */,
 				51043C83C92809AB57E1A480 /* Model */,
 				510431123191A7C84DB2D581 /* UI */,
+				51043E2525F90B539767A93B /* PhotoStreamCell.swift */,
+				51043CFCB812DE53D6F3724E /* PhotoStreamLayout.swift */,
 			);
 			path = PhotoStream;
 			sourceTree = "<group>";
@@ -611,6 +617,8 @@
 				51043256D33EC8DD17038E3E /* AlertActionFactory.swift in Sources */,
 				51043FA161D6333E1A439928 /* ImagePickerFactory.swift in Sources */,
 				51043D4F7E1A71544A394D05 /* ImageManipulator.swift in Sources */,
+				5104335D5F77F482D00552FE /* PhotoStreamCell.swift in Sources */,
+				510432EF963A2E1DACC4A437 /* PhotoStreamLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
