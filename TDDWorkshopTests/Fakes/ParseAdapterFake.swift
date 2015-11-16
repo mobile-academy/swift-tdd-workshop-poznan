@@ -8,7 +8,7 @@ import Parse
 @testable
 import TDDWorkshop
 
-class ParseAdapterFake: ParseAdapter {
+class ParseAdapterFake: ParseAdapting {
 
     //MARK: Properties
 

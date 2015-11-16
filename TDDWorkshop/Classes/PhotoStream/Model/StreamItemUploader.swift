@@ -4,18 +4,18 @@
 
 import Foundation
 
-class StreamItemUploader {
+class StreamItemUploader: ItemUploading {
 
-    let parseAdapter: ParseAdapter
+    let parseAdapter: ParseAdapting
     var transformer = StreamItemTransformer()
 
     //MARK: Object Life Cycle
 
-    init (parseAdapter: ParseAdapter) {
+    init (parseAdapter: ParseAdapting) {
         self.parseAdapter = parseAdapter
     }
 
-    //MARK: Public methods
+    //MARK: ItemUploading
 
     func uploadItem(streamItem: StreamItem, completion: (Bool, ErrorType?) -> ()) {
         let parseObject = transformer.parseObjectFromStreamItem(streamItem)

@@ -8,7 +8,7 @@ import UIKit
 @testable
 import TDDWorkshop
 
-class ImageManipulatorFake: ImageManipulator {
+class ImageManipulatorFake: ImageManipulating {
 
     var capturedImageToScale: UIImage?
     var capturedImageToDataConversion: UIImage?

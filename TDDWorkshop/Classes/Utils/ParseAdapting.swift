@@ -5,7 +5,12 @@
 import Foundation
 import Parse
 
-class ParseAdapter {
+protocol ParseAdapting {
+    func executeQuery(query: PFQuery, completion: ([PFObject]?, ErrorType?) -> ())
+    func uploadObject(object: PFObject, completion:(Bool, ErrorType?) -> ())
+}
+
+class DefaultParseAdapter: ParseAdapting {
 
     func executeQuery(query: PFQuery, completion: ([PFObject]?, ErrorType?) -> ()) {
         query.findObjectsInBackgroundWithBlock(completion)

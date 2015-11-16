@@ -8,7 +8,7 @@ import UIKit
 @testable
 import TDDWorkshop
 
-class ImagePickerFactoryFake: ImagePickerFactory {
+class ImagePickerFactoryFake: ImagePickerCreating {
 
     var capturedSourceType: UIImagePickerControllerSourceType?
     var fakePicker: UIImagePickerController = UIImagePickerController()

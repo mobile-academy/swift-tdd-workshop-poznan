@@ -5,11 +5,11 @@
 import Foundation
 import UIKit
 
-protocol AlertActionFactory {
+protocol AlertActionCreating {
     func createActionWithTitle(title: String, style: UIAlertActionStyle, handler: (UIAlertAction) -> ()) -> UIAlertAction
 }
 
-class DefaultAlertActionFactory: AlertActionFactory {
+class DefaultAlertActionFactory: AlertActionCreating {
     func createActionWithTitle(title: String, style: UIAlertActionStyle, handler: (UIAlertAction) -> ()) -> UIAlertAction {
         return UIAlertAction(title: title, style: style, handler: handler)
     }

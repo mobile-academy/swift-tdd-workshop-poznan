@@ -5,7 +5,7 @@
 import Foundation
 import UIKit
 
-protocol ViewControllerPresenter {
+protocol ViewControllerPresenting {
 
     weak var viewController: UIViewController? {get set}
 
@@ -13,13 +13,9 @@ protocol ViewControllerPresenter {
     func dismissViewController(viewController: UIViewController)
 }
 
-class DefaultViewControllerPresenter: ViewControllerPresenter {
+class DefaultViewControllerPresenter: ViewControllerPresenting {
 
     weak var viewController: UIViewController?
-
-    init(viewController: UIViewController) {
-        self.viewController = viewController
-    }
 
     func presentViewController(viewController: UIViewController) {
         self.viewController?.presentViewController(viewController, animated: true, completion: nil)

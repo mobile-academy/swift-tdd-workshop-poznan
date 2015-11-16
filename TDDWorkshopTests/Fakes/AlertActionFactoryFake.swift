@@ -8,7 +8,7 @@ import UIKit
 @testable
 import TDDWorkshop
 
-class AlertActionFactoryFake: AlertActionFactory {
+class AlertActionFactoryFake: AlertActionCreating {
 
     var capturedHandlers: [((UIAlertAction) -> ())]
     var capturedActions: [UIAlertAction]

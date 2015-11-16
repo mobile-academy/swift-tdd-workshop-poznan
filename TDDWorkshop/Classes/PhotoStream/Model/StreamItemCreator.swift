@@ -10,21 +10,21 @@ protocol StreamItemCreatorDelegate: class {
     func creator(creator: StreamItemCreator, failedWithError: ErrorType)
 }
 
-class StreamItemCreator: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class StreamItemCreator: NSObject, ItemCreating, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     //MARK: Properties
 
     weak var delegate: StreamItemCreatorDelegate?
 
-    var controllerPresenter: ViewControllerPresenter
+    var controllerPresenter: ViewControllerPresenting
     var resourceAvailability: ResourceTypeAvailability
-    var actionFactory: AlertActionFactory
-    var pickerFactory: ImagePickerFactory
-    var imageManipulator: ImageManipulator
+    var actionFactory: AlertActionCreating
+    var pickerFactory: ImagePickerCreating
+    var imageManipulator: ImageManipulating
 
     //MARK: Object Life Cycle
 
-    init(presenter: ViewControllerPresenter) {
+    init(presenter: ViewControllerPresenting) {
         controllerPresenter = presenter
         resourceAvailability = ResourceTypeAvailability()
         actionFactory = DefaultAlertActionFactory()
@@ -32,7 +32,7 @@ class StreamItemCreator: NSObject, UIImagePickerControllerDelegate, UINavigation
         imageManipulator = DefaultImageManipulator()
     }
 
-    //MARK: Public methods
+    //MARK: ItemCreating
 
     func createStreamItem() {
         presentAlertController()

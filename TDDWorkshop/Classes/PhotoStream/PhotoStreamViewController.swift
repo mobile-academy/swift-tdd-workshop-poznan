@@ -6,39 +6,41 @@ import UIKit
 
 class PhotoStreamViewController: UICollectionViewController, StreamItemCreatorDelegate {
 
-    let parseAdapter = ParseAdapter() //TODO refactor
+    var parseAdapter: ParseAdapting
     
-    var downloader: StreamItemDownloader?
-    var creator: StreamItemCreator?
-    var uploader: StreamItemUploader?
-    var imageManipulator: ImageManipulator?
-    var presenter: ViewControllerPresenter?
-    var refreshControl: UIRefreshControl?
+    var downloader: ItemDownloading
+    var creator: ItemCreating
+    var uploader: ItemUploading
+
+    var imageManipulator: ImageManipulating
+    var presenter: ViewControllerPresenting
+    var refreshControl: UIRefreshControl
 
     var streamItems = [StreamItem]()
+
+    //MARK: Object Life Cycle
+
+    required init?(coder: NSCoder) {
+        parseAdapter = DefaultParseAdapter()
+        presenter = DefaultViewControllerPresenter()
+        imageManipulator = DefaultImageManipulator()
+        refreshControl = UIRefreshControl()
+        downloader = StreamItemDownloader(parseAdapter: parseAdapter)
+        creator = StreamItemCreator(presenter: presenter)
+        uploader = StreamItemUploader(parseAdapter: parseAdapter)
+
+        super.init(coder: coder)
+        presenter.viewController = self
+        creator.delegate = self
+    }
 
     //MARK: View Life Cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter = DefaultViewControllerPresenter(viewController: self)
-        imageManipulator = DefaultImageManipulator()
-        
-        downloader = StreamItemDownloader(parseAdapter: parseAdapter)
-        creator = StreamItemCreator(presenter: presenter!)
-        uploader = StreamItemUploader(parseAdapter: parseAdapter)
-        
-        creator?.delegate = self
-        
-        refreshControl = UIRefreshControl()
-        refreshControl?.addTarget(self, action: "didPullToRefresh:", forControlEvents: UIControlEvents.ValueChanged)
-        collectionView?.addSubview(refreshControl!)
-        
-        collectionView?.alwaysBounceVertical = true
-        
         downloadStreamItems()
     }
-    
+
     //MARK: UICollectionViewDataSource
 
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -49,7 +51,7 @@ class PhotoStreamViewController: UICollectionViewController, StreamItemCreatorDe
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("PhotoStreamCell", forIndexPath: indexPath)
         if let photoCell = cell as? PhotoStreamCell {
             let streamItem = streamItems[indexPath.row]
-            photoCell.imageView.image = imageManipulator?.imageFromData(streamItem.imageData)
+            photoCell.imageView.image = imageManipulator.imageFromData(streamItem.imageData)
         }
         return cell
     }
@@ -57,7 +59,7 @@ class PhotoStreamViewController: UICollectionViewController, StreamItemCreatorDe
     //MARK: Actions
     
     @IBAction func didPressAddItemBarButtonItem(sender: UIBarButtonItem!) {
-        creator?.createStreamItem()
+        creator.createStreamItem()
     }
     
     func didPullToRefresh(refreshControl: UIRefreshControl) {
@@ -67,7 +69,7 @@ class PhotoStreamViewController: UICollectionViewController, StreamItemCreatorDe
     //MARK: StreamItemCreatorDelegate
 
     func creator(creator: StreamItemCreator, didCreateItem item: StreamItem) {
-        uploader?.uploadItem(item) {success, error in
+        uploader.uploadItem(item) {success, error in
             if success == false {
                 NSLog("Failed to upload: \(error)")
             } else {
@@ -80,13 +82,16 @@ class PhotoStreamViewController: UICollectionViewController, StreamItemCreatorDe
     }
 
     //MARK: Private methods
-    
-    
+
+    private func setupCollectionView() {
+        refreshControl.addTarget(self, action: "didPullToRefresh:", forControlEvents: UIControlEvents.ValueChanged)
+        collectionView?.addSubview(refreshControl)
+        collectionView?.alwaysBounceVertical = true
+    }
+
     private func downloadStreamItems() {
-        downloader?.downloadItems {[weak self] items, error in
-            
-            self?.refreshControl?.endRefreshing()
-            
+        downloader.downloadItems {[weak self] items, error in
+            self?.refreshControl.endRefreshing()
             if error != nil {
                 //TODO prompt about error
             } else {

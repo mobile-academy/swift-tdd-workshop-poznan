@@ -5,18 +5,18 @@
 import Foundation
 import Parse
 
-class StreamItemDownloader {
+class StreamItemDownloader: ItemDownloading {
 
-    let parseAdapter: ParseAdapter
+    let parseAdapter: ParseAdapting
     var transformer = StreamItemTransformer()
 
     //MARK: Object Life Cycle
 
-    init(parseAdapter: ParseAdapter) {
+    init(parseAdapter: ParseAdapting) {
         self.parseAdapter = parseAdapter
     }
 
-    //MARK: Public methods
+    //MARK: ItemDownloading
 
     func downloadItems(completion: ([StreamItem]?, ErrorType?) -> ()) {
 

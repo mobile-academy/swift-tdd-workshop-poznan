@@ -8,7 +8,7 @@ import UIKit
 @testable
 import TDDWorkshop
 
-class ViewControllerPresenterFake: ViewControllerPresenter {
+class ViewControllerPresenterFake: ViewControllerPresenting {
 
     var capturedPresentedViewController: UIViewController?
     var capturedDismissedViewController: UIViewController?

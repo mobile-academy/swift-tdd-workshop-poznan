@@ -6,14 +6,14 @@ import Foundation
 import UIKit
 import UIImage_Resize
 
-protocol ImageManipulator {
+protocol ImageManipulating {
     func scaleImage(image: UIImage, width: Float) -> UIImage
 
     func dataFromImage(image: UIImage, quality: Float) -> NSData
     func imageFromData(data: NSData) -> UIImage
 }
 
-class DefaultImageManipulator: ImageManipulator {
+class DefaultImageManipulator: ImageManipulating {
 
     func scaleImage(image: UIImage, width: Float) -> UIImage {
         let size = CGSize(width: 300, height: 300)
