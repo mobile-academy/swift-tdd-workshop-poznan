@@ -4,6 +4,7 @@
 
 import Foundation
 import UIKit
+import UIImage_Resize
 
 protocol ImageManipulator {
     func scaleImage(image: UIImage, width: Float) -> UIImage
@@ -15,7 +16,8 @@ protocol ImageManipulator {
 class DefaultImageManipulator: ImageManipulator {
 
     func scaleImage(image: UIImage, width: Float) -> UIImage {
-        return image //TODO
+        let size = CGSize(width: 300, height: 300)
+        return image.resizedImageToSize(size)
     }
 
     func dataFromImage(image: UIImage, quality: Float) -> NSData {

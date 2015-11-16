@@ -11,14 +11,9 @@ class PhotoStreamLayout: UICollectionViewFlowLayout {
 
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-    }
-
-    override init () {
-        super.init()
         sectionInset = UIEdgeInsets(top:8.0, left: 0.0, bottom:8.0, right:0.0)
         minimumInteritemSpacing = 4.0
         minimumLineSpacing = 4.0
         itemSize = CGSize(width: 77.0, height: 77.0)
     }
-
 }

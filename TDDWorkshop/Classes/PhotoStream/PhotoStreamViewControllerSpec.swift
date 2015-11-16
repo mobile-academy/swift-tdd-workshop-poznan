@@ -12,6 +12,20 @@ class PhotoStreamViewControllerSpec: QuickSpec {
             beforeEach {
                 testedObject = PhotoStreamViewController()
             }
+            
+            //TODO pull to refresh
+            
+            
+            //TODO view did load
+            
+            //TODO when downloaded
+            
+            //TODO create item
+            
+            //TODO when created
+            
+            //TODO when uploaded            
+            
         }
     }
 }

@@ -29,8 +29,8 @@ class StreamItemTransformerSpec: QuickSpec {
                     expect(title).notTo(beNil())
                     expect(title!) == "Foo 123"
                 }
-                it("should set image data under 'image-data' key") {
-                    let data = parseObject["image-data"] as? NSData
+                it("should set image data under 'imageData' key") {
+                    let data = parseObject["imageData"] as? NSData
                     expect(data).notTo(beNil())
                     expect(data!) == fakeImageData
                 }
@@ -48,7 +48,7 @@ class StreamItemTransformerSpec: QuickSpec {
                 context("when it has title and image data") {
                     beforeEach {
                         parseObject["title"] = "Foo Bar"
-                        parseObject["image-data"] = fakeImageData
+                        parseObject["imageData"] = fakeImageData
                         streamItem = transformer.streamItemFromParseObject(parseObject)
                     }
                     it("should create Stream Item") {
@@ -63,7 +63,7 @@ class StreamItemTransformerSpec: QuickSpec {
                 }
                 context("when it does NOT have title") {
                     beforeEach {
-                        parseObject["image-data"] = NSData()
+                        parseObject["imageData"] = NSData()
                         streamItem = transformer.streamItemFromParseObject(parseObject)
                     }
                     it("should NOT create Stream Item") {

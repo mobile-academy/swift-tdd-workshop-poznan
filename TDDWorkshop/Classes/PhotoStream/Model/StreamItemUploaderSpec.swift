@@ -42,7 +42,7 @@ class StreamItemUploaderSpec: QuickSpec {
                 }
                 it("should upload object with image data") {
                     let object = parseAdapter.capturedUploadedObject!
-                    expect(object["image-data"] as? NSData).notTo(beNil())
+                    expect(object["imageData"] as? NSData).notTo(beNil())
                 }
 
                 context("when it succeeds") {

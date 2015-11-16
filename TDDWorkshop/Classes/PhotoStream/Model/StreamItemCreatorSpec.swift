@@ -96,7 +96,6 @@ class StreamItemCreatorSpec: QuickSpec {
                                 expect(presenter.capturedPresentedViewController as? UIImagePickerController).notTo(beNil())
                             }
                             it("should present picker with Photo Library source type") {
-                                let picker = presenter.capturedPresentedViewController as! UIImagePickerController
                                 expect(pickerFactory.capturedSourceType!) == UIImagePickerControllerSourceType.PhotoLibrary
                             }
                         }
@@ -110,7 +109,6 @@ class StreamItemCreatorSpec: QuickSpec {
                                 expect(presenter.capturedPresentedViewController as? UIImagePickerController).notTo(beNil())
                             }
                             it("should present picker with Camera source type") {
-                                let picker = presenter.capturedPresentedViewController as! UIImagePickerController
                                 expect(pickerFactory.capturedSourceType!) == UIImagePickerControllerSourceType.Camera
                             }
                         }

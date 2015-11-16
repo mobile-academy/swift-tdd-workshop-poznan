@@ -6,17 +6,5 @@ import Foundation
 import UIKit
 
 class PhotoStreamCell: UICollectionViewCell {
-
-    //MARK: Object Life Cycle
-
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-    }
-
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-
-        backgroundColor = UIColor.redColor()
-    }
-
+    @IBOutlet weak var imageView: UIImageView!
 }

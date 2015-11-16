@@ -42,7 +42,7 @@ class StreamItemDownloaderSpec: QuickSpec {
                     beforeEach {
                         let exampleObject = PFObject(className: StreamItem.entityName)
                         exampleObject["title"] = "Foo"
-                        exampleObject["image-data"] = NSData()
+                        exampleObject["imageData"] = NSData()
                         parseAdapter.capturedQueryCompletion?([exampleObject], nil)
                     }
                     it("should NOT pass error") {

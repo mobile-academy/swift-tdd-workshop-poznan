@@ -47,6 +47,7 @@ class StreamItemCreator: NSObject, UIImagePickerControllerDelegate, UINavigation
             let imageData = imageManipulator.dataFromImage(scaledImage, quality: 0.7)
             let streamItem = StreamItem(title: "Foo Bar", imageData: imageData)
             delegate?.creator(self, didCreateItem: streamItem)
+            controllerPresenter.dismissViewController(picker) //TODO test me!
         } else {
             //TODO
         }

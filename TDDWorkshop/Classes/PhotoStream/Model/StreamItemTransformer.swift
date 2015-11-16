@@ -11,7 +11,7 @@ class StreamItemTransformer {
     //MARK: Constants
 
     let TitleKey = "title"
-    let ImageDataKey = "image-data"
+    let ImageDataKey = "imageData"
 
     //MARK: Public methods
 
