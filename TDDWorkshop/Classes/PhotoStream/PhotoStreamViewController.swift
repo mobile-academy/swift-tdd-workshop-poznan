@@ -4,7 +4,7 @@
 
 import UIKit
 
-class PhotoStreamViewController: UICollectionViewController, StreamItemCreatorDelegate {
+class PhotoStreamViewController: UICollectionViewController, ItemCreatingDelegate {
 
     var parseAdapter: ParseAdapting
     
@@ -66,9 +66,9 @@ class PhotoStreamViewController: UICollectionViewController, StreamItemCreatorDe
         downloadStreamItems()
     }
     
-    //MARK: StreamItemCreatorDelegate
+    //MARK: ItemCreatingDelegate
 
-    func creator(creator: StreamItemCreator, didCreateItem item: StreamItem) {
+    func creator(creator: ItemCreating, didCreateItem item: StreamItem) {
         uploader.uploadItem(item) {success, error in
             if success == false {
                 NSLog("Failed to upload: \(error)")
@@ -78,7 +78,7 @@ class PhotoStreamViewController: UICollectionViewController, StreamItemCreatorDe
         }
     }
 
-    func creator(creator: StreamItemCreator, failedWithError: ErrorType) {
+    func creator(creator: ItemCreating, failedWithError: ErrorType) {
     }
 
     //MARK: Private methods

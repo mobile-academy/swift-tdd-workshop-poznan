@@ -7,18 +7,18 @@ import Foundation
 @testable
 import TDDWorkshop
 
-class TestStreamItemCreatorDelegate: StreamItemCreatorDelegate {
+class TestStreamItemCreatorDelegate: ItemCreatingDelegate {
 
     var capturedStreamItem: StreamItem?
     var capturedError: ErrorType?
 
-    //MARK: StreamItemCreatorDelegate
+    //MARK: ItemCreatingDelegate
 
-    func creator(creator: StreamItemCreator, didCreateItem item: StreamItem) {
+    func creator(creator: ItemCreating, didCreateItem item: StreamItem) {
         capturedStreamItem = item
     }
 
-    func creator(creator: StreamItemCreator, failedWithError error: ErrorType) {
+    func creator(creator: ItemCreating, failedWithError error: ErrorType) {
         capturedError = error
     }
 

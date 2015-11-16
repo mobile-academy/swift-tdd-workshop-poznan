@@ -20,12 +20,12 @@ class ParseAdapterFake: ParseAdapting {
 
     //MARK: Overrides
 
-    override func executeQuery(query: PFQuery, completion: ([PFObject]?, ErrorType?) -> ()) {
+    func executeQuery(query: PFQuery, completion: ([PFObject]?, ErrorType?) -> ()) {
         capturedQuery = query
         capturedQueryCompletion = completion
     }
 
-    override func uploadObject(object: PFObject, completion: (Bool, ErrorType?) -> ()) {
+    func uploadObject(object: PFObject, completion: (Bool, ErrorType?) -> ()) {
         capturedUploadedObject = object
         capturedUploadCompletion = completion
     }

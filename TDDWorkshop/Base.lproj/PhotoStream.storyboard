@@ -25,7 +25,7 @@
         <!--Photo Stream-->
         <scene sceneID="tdz-ny-3rm">
             <objects>
-                <collectionViewController title="Photo Stream" id="K2V-uQ-pa6" customClass="PhotoStreamViewController" customModule="TDDWorkshop" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="PhotoStream" title="Photo Stream" id="K2V-uQ-pa6" customClass="PhotoStreamViewController" customModule="TDDWorkshop" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="JQt-lv-8xf">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

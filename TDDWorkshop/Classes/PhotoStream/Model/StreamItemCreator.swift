@@ -5,16 +5,11 @@
 import Foundation
 import UIKit
 
-protocol StreamItemCreatorDelegate: class {
-    func creator(creator: StreamItemCreator, didCreateItem item: StreamItem)
-    func creator(creator: StreamItemCreator, failedWithError: ErrorType)
-}
-
 class StreamItemCreator: NSObject, ItemCreating, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     //MARK: Properties
 
-    weak var delegate: StreamItemCreatorDelegate?
+    weak var delegate: ItemCreatingDelegate?
 
     var controllerPresenter: ViewControllerPresenting
     var resourceAvailability: ResourceTypeAvailability
