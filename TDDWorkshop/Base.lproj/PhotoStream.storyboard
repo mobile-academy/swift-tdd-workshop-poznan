@@ -60,6 +60,7 @@
                                 <size key="customSize" width="100" height="100"/>
                                 <connections>
                                     <outlet property="imageView" destination="aj0-AW-ggU" id="ktZ-zm-TcV"/>
+                                    <segue destination="XSI-Sg-erK" kind="showDetail" id="3ca-uV-0bd"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -81,6 +82,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cLn-SY-qOR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="823" y="-410"/>
+        </scene>
+        <!--StreamItemPreview-->
+        <scene sceneID="Lnu-GE-0rh">
+            <objects>
+                <viewControllerPlaceholder storyboardName="StreamItemPreview" id="XSI-Sg-erK" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zYz-kM-Ync" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1576.5" y="-410"/>
         </scene>
     </scenes>
     <resources>

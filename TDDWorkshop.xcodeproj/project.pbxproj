@@ -47,6 +47,7 @@
 		94DCC8141BFA571A00ABEF01 /* Agenda.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94DCC8131BFA571A00ABEF01 /* Agenda.storyboard */; };
 		94DCC8171BFA572700ABEF01 /* PhotoStream.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94DCC8151BFA572700ABEF01 /* PhotoStream.storyboard */; };
 		94DCC8191BFA573600ABEF01 /* Speakers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94DCC8181BFA573600ABEF01 /* Speakers.storyboard */; };
+		94DCC81C1BFA6DB200ABEF01 /* StreamItemPreview.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94DCC81A1BFA6DB200ABEF01 /* StreamItemPreview.storyboard */; };
 		A1DFDFA51BF3D126007D3C33 /* PollManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DFDFA41BF3D126007D3C33 /* PollManager.swift */; };
 		B27A91BCFEE01D5302624425 /* Speaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27A97ECFEB155F0C61B235C /* Speaker.swift */; };
 		B27A9435A5125ABF50C02EB4 /* SpeakersCollectionViewDataSourceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27A9A9CFA5BBA8E9E675BF3 /* SpeakersCollectionViewDataSourceSpec.swift */; };
@@ -115,6 +116,7 @@
 		94DCC8131BFA571A00ABEF01 /* Agenda.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Agenda.storyboard; sourceTree = "<group>"; };
 		94DCC8161BFA572700ABEF01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = TDDWorkshop/Base.lproj/PhotoStream.storyboard; sourceTree = SOURCE_ROOT; };
 		94DCC8181BFA573600ABEF01 /* Speakers.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Speakers.storyboard; sourceTree = "<group>"; };
+		94DCC81B1BFA6DB200ABEF01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = TDDWorkshop/Base.lproj/StreamItemPreview.storyboard; sourceTree = SOURCE_ROOT; };
 		97D5E7DA621584D0C2C37C86 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		A162F1541BEA992400262528 /* TDDWorkshop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TDDWorkshop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A162F1681BEA992400262528 /* TDDWorkshopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TDDWorkshopTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -383,6 +385,7 @@
 				B27A9F3DE55BB9681CE91770 /* Main.storyboard */,
 				94DCC8181BFA573600ABEF01 /* Speakers.storyboard */,
 				94DCC8151BFA572700ABEF01 /* PhotoStream.storyboard */,
+				94DCC81A1BFA6DB200ABEF01 /* StreamItemPreview.storyboard */,
 				94DCC8131BFA571A00ABEF01 /* Agenda.storyboard */,
 				94DCC8101BFA570B00ABEF01 /* Poll.storyboard */,
 				B27A9BC97F002D3AA2328CD6 /* LaunchScreen.storyboard */,
@@ -490,6 +493,7 @@
 			files = (
 				94DCC8191BFA573600ABEF01 /* Speakers.storyboard in Resources */,
 				94DCC8141BFA571A00ABEF01 /* Agenda.storyboard in Resources */,
+				94DCC81C1BFA6DB200ABEF01 /* StreamItemPreview.storyboard in Resources */,
 				B27A9FA65FA206E5D57CF719 /* Main.storyboard in Resources */,
 				B27A9D7C0AB6A484AB5BD296 /* LaunchScreen.storyboard in Resources */,
 				94DCC8121BFA570B00ABEF01 /* Poll.storyboard in Resources */,
@@ -684,6 +688,14 @@
 				94DCC8161BFA572700ABEF01 /* Base */,
 			);
 			name = PhotoStream.storyboard;
+			sourceTree = "<group>";
+		};
+		94DCC81A1BFA6DB200ABEF01 /* StreamItemPreview.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				94DCC81B1BFA6DB200ABEF01 /* Base */,
+			);
+			name = StreamItemPreview.storyboard;
 			sourceTree = "<group>";
 		};
 		B27A9BC97F002D3AA2328CD6 /* LaunchScreen.storyboard */ = {
