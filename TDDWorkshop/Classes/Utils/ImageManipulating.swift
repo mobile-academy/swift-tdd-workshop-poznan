@@ -7,7 +7,7 @@ import UIKit
 import UIImage_Resize
 
 protocol ImageManipulating {
-    func scaleImage(image: UIImage, width: Float) -> UIImage
+    func scaleImage(image: UIImage, maxDimension: Int) -> UIImage
 
     func dataFromImage(image: UIImage, quality: Float) -> NSData
     func imageFromData(data: NSData) -> UIImage
@@ -15,8 +15,8 @@ protocol ImageManipulating {
 
 class DefaultImageManipulator: ImageManipulating {
 
-    func scaleImage(image: UIImage, width: Float) -> UIImage {
-        let size = CGSize(width: 300, height: 300)
+    func scaleImage(image: UIImage, maxDimension: Int) -> UIImage {
+        let size = CGSize(width: maxDimension, height: maxDimension)
         return image.resizedImageToSize(size)
     }
 

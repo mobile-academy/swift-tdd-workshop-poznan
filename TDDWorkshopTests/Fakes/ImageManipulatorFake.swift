@@ -17,7 +17,7 @@ class ImageManipulatorFake: ImageManipulating {
     var fakeImageFromData: UIImage = UIImage()
     var fakeScaledImage: UIImage = UIImage()
 
-    func scaleImage(image: UIImage, width: Float) -> UIImage {
+    func scaleImage(image: UIImage, maxDimension: Int) -> UIImage {
         capturedImageToScale = image
         return fakeScaledImage
     }

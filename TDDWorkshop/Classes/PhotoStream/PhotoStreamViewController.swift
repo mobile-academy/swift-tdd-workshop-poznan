@@ -54,6 +54,9 @@ class PhotoStreamViewController: UICollectionViewController, ItemCreatingDelegat
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("PhotoStreamCell", forIndexPath: indexPath)
         if let photoCell = cell as? PhotoStreamCell {
             let streamItem = streamItems[indexPath.row]
+            photoCell.imageView.layer.borderColor = UIColor.redColor().CGColor
+            photoCell.imageView.layer.borderWidth = 1.0
+            photoCell.imageView.contentMode = UIViewContentMode.ScaleAspectFill
             photoCell.imageView.image = imageManipulator.imageFromData(streamItem.imageData)
         }
         return cell

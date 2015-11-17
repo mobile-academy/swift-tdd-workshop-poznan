@@ -31,20 +31,20 @@ class StreamItemCreator: NSObject, ItemCreating, UIImagePickerControllerDelegate
 
     func createStreamItem() {
         presentAlertController()
-        //TODO
     }
 
     //MARK: UIImagePickerControllerDelegate
 
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
-            let scaledImage = imageManipulator.scaleImage(image, width: 300)
+            let scaledImage = imageManipulator.scaleImage(image, maxDimension: 800)
             let imageData = imageManipulator.dataFromImage(scaledImage, quality: 0.7)
-            let streamItem = StreamItem(title: "Foo Bar", imageData: imageData)
+            let streamItem = StreamItem(title: "Always the same", imageData: imageData)
             delegate?.creator(self, didCreateItem: streamItem)
-            controllerPresenter.dismissViewController(picker) //TODO test me!
+            controllerPresenter.dismissViewController(picker)
         } else {
-            //TODO
+            let error = NSError(domain: "TDDWorkshop", code: -1, userInfo: nil)
+            delegate?.creator(self, failedWithError: error)
         }
     }
 

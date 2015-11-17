@@ -7,4 +7,5 @@ import UIKit
 
 class PhotoStreamCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
+    
 }
