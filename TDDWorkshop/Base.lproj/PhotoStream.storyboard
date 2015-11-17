@@ -60,7 +60,7 @@
                                 <size key="customSize" width="100" height="100"/>
                                 <connections>
                                     <outlet property="imageView" destination="aj0-AW-ggU" id="ktZ-zm-TcV"/>
-                                    <segue destination="XSI-Sg-erK" kind="showDetail" id="3ca-uV-0bd"/>
+                                    <segue destination="XSI-Sg-erK" kind="showDetail" identifier="StreamItemPrevieSegue" id="3ca-uV-0bd"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>

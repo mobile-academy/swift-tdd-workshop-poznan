@@ -6,14 +6,15 @@ import UIKit
 
 class PhotoStreamViewController: UICollectionViewController, ItemCreatingDelegate {
 
+    //MARK: Properties
+
     var parseAdapter: ParseAdapting
-    
     var downloader: ItemDownloading
     var creator: ItemCreating
     var uploader: ItemUploading
-
     var imageManipulator: ImageManipulating
     var presenter: ViewControllerPresenting
+    var alertActionFactory: AlertActionCreating
     var refreshControl: UIRefreshControl
 
     var streamItems = [StreamItem]()
@@ -28,6 +29,7 @@ class PhotoStreamViewController: UICollectionViewController, ItemCreatingDelegat
         downloader = StreamItemDownloader(parseAdapter: parseAdapter)
         creator = StreamItemCreator(presenter: presenter)
         uploader = StreamItemUploader(parseAdapter: parseAdapter)
+        alertActionFactory = DefaultAlertActionFactory()
 
         super.init(coder: coder)
         presenter.viewController = self
@@ -38,6 +40,7 @@ class PhotoStreamViewController: UICollectionViewController, ItemCreatingDelegat
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupCollectionView()
         downloadStreamItems()
     }
 
@@ -66,22 +69,40 @@ class PhotoStreamViewController: UICollectionViewController, ItemCreatingDelegat
         downloadStreamItems()
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "StreamItemPrevieSegue" {
+            if let navController = segue.destinationViewController as? UINavigationController,
+                let viewController = navController.viewControllers.first as? StreamItemViewController,
+                let indexPaths = collectionView?.indexPathsForSelectedItems(),
+                let firstSelectedItem = indexPaths.first {
+                    viewController.streamItem = streamItems[firstSelectedItem.item]
+            }
+        }
+    }
+    
     //MARK: ItemCreatingDelegate
 
     func creator(creator: ItemCreating, didCreateItem item: StreamItem) {
-        uploader.uploadItem(item) {success, error in
+        uploader.uploadItem(item) {[weak self] success, error in
             if success == false {
-                NSLog("Failed to upload: \(error)")
+                self?.presentErrorAlertWithMessage("Failed to upload stream item!")
             } else {
-                NSLog("Uploaded item!")
+                //TODO add item and reload
             }
         }
     }
 
     func creator(creator: ItemCreating, failedWithError: ErrorType) {
+        presentErrorAlertWithMessage("Failed to create stream item!")
     }
 
     //MARK: Private methods
+
+    private func presentErrorAlertWithMessage(message: String) {
+        let errorAlert = UIAlertController(title: "Error", message: message, preferredStyle: .Alert)
+        errorAlert.addAction(alertActionFactory.createActionWithTitle("Cancel", style: .Cancel) {action in })
+        presenter.presentViewController(errorAlert)
+    }
 
     private func setupCollectionView() {
         refreshControl.addTarget(self, action: "didPullToRefresh:", forControlEvents: UIControlEvents.ValueChanged)
@@ -92,19 +113,14 @@ class PhotoStreamViewController: UICollectionViewController, ItemCreatingDelegat
     private func downloadStreamItems() {
         downloader.downloadItems {[weak self] items, error in
             self?.refreshControl.endRefreshing()
-            if error != nil {
-                //TODO prompt about error
+            if error != nil || items == nil {
+                self?.presentErrorAlertWithMessage("Failed to download stream items!")
             } else {
-                if items != nil {
-                    self?.streamItems = items!
-                } else {
-                    self?.streamItems = [] //TODO improve this
-                }
+                self?.streamItems = items!
                 self?.collectionView?.reloadData()
             }
         }
     }
-
 }
 
 

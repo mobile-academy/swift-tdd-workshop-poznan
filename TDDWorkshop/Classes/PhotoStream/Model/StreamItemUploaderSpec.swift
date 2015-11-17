@@ -18,14 +18,14 @@ class StreamItemUploaderSpec: QuickSpec {
 
             describe("upload item") {
 
-                var testItem: StreamItem!
+                var fixtureItem: StreamItem!
                 var capturedSuccess: Bool?
                 var capturedError: ErrorType?
 
                 beforeEach {
-                    testItem = StreamItem(title: "Foo Bar", imageData: NSData())
+                    fixtureItem = StreamItem(title: "Foo Bar", imageData: NSData())
                     capturedSuccess = nil
-                    uploader.uploadItem(testItem) {
+                    uploader.uploadItem(fixtureItem) {
                         success, error in
                         capturedSuccess = success
                         capturedError = error

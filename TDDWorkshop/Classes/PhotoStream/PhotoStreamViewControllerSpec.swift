@@ -13,12 +13,14 @@ class PhotoStreamViewControllerSpec: QuickSpec {
             var uploader: StreamItemUploaderFake!
             var creator: StreamItemCreatorFake!
             var imageManipulator: ImageManipulatorFake!
+            var presenter: ViewControllerPresenterFake!
 
             beforeEach {
                 downloader = StreamItemDownloaderFake()
                 uploader = StreamItemUploaderFake()
                 creator = StreamItemCreatorFake()
                 imageManipulator = ImageManipulatorFake()
+                presenter = ViewControllerPresenterFake()
 
                 let storyboard = UIStoryboard(name: "PhotoStream", bundle: nil)
                 viewController = storyboard.instantiateViewControllerWithIdentifier("PhotoStream") as! PhotoStreamViewController
@@ -27,6 +29,7 @@ class PhotoStreamViewControllerSpec: QuickSpec {
                 viewController.uploader = uploader
                 viewController.creator = creator
                 viewController.imageManipulator = imageManipulator
+                viewController.presenter = presenter
             }
 
             describe("when view loads") {
@@ -65,8 +68,16 @@ class PhotoStreamViewControllerSpec: QuickSpec {
                             let error = NSError(domain: "Foo", code: 123, userInfo: nil)
                             downloader.capturedCompletion?(nil, error)
                         }
-                        it("should present error alert") {
-                            //TODO
+                        it("should present alert controller") {
+                            expect(presenter.capturedPresentedViewController as? UIAlertController).notTo(beNil())
+                        }
+                        it("should present alert controller with title Error") {
+                            let alertController = presenter.capturedPresentedViewController as! UIAlertController
+                            expect(alertController.title) == "Error"
+                        }
+                        it("should present alert controller with message 'Failed to download stream items!'") {
+                            let alertController = presenter.capturedPresentedViewController as! UIAlertController
+                            expect(alertController.message) == "Failed to download stream items!"
                         }
                         it("should stop refresh control") {
                             expect(refreshControlFake.endRefreshingCalled) == true
@@ -76,19 +87,12 @@ class PhotoStreamViewControllerSpec: QuickSpec {
             }
 
             describe("UICollectionViewDelegate") {
+                var fixtureItem: StreamItem!
                 beforeEach {
-
+                    fixtureItem = StreamItem(title: "Foo", imageData: NSData())
+                    viewController.streamItems = [fixtureItem]
                 }
                 it("should present preview view controller when item is pressed") {
-                    //TODO
-                }
-            }
-
-            describe("UICollectionViewDataSource") {
-                beforeEach {
-
-                }
-                it("should return number of item in section 0 equal to downloaded items") {
                     //TODO
                 }
             }
@@ -114,38 +118,66 @@ class PhotoStreamViewControllerSpec: QuickSpec {
 
             describe("ItemCreatingDelegate") {
                 context("item was created") {
+                    var fixtureItem: StreamItem!
                     beforeEach {
-
+                        fixtureItem = StreamItem(title: "Foo", imageData: NSData())
+                        viewController.creator(creator, didCreateItem: fixtureItem)
                     }
                     it("should upload item") {
-                        //TODO
+                        expect(uploader.uploadItemCalled) == true
                     }
                     context("when upload finished") {
+                        var collectionViewFake : UICollectionViewFake!
+
+                        beforeEach {
+                            collectionViewFake = UICollectionViewFake(frame: CGRectZero,
+                                    collectionViewLayout: UICollectionViewFlowLayout())
+                            viewController.collectionView = collectionViewFake
+                        }
                         context("with success") {
                             beforeEach {
-
+                                uploader.capturedCompletion?(true, nil)
+                            }
+                            it("should insert newly added stream item") {
+                                //TODO
                             }
                             it("should reload collection view") {
-                                //TODO
+                                //TODO expect(collectionViewFake.reloadDataCalled) == true
                             }
                         }
                         context("with failure") {
                             beforeEach {
-
+                                let error = NSError(domain: "Foo", code: 123, userInfo: nil)
+                                uploader.capturedCompletion?(false, error)
                             }
-                            it("should present error alert") {
-                                //TODO
+                            it("should present alert controller") {
+                                expect(presenter.capturedPresentedViewController as? UIAlertController).notTo(beNil())
+                            }
+                            it("should present alert controller with title Error") {
+                                let alertController = presenter.capturedPresentedViewController as! UIAlertController
+                                expect(alertController.title) == "Error"
+                            }
+                            it("should present alert controller with message 'Failed to upload stream item!'") {
+                                let alertController = presenter.capturedPresentedViewController as! UIAlertController
+                                expect(alertController.message) == "Failed to upload stream item!"
                             }
                         }
                     }
-
                 }
                 context("failed to create item") {
                     beforeEach {
-
+                        viewController.creator(creator, failedWithError: NSError(domain:"Foo", code: 123, userInfo: nil))
                     }
-                    it("should present error alert") {
-                        //TODO
+                    it("should present alert controller") {
+                        expect(presenter.capturedPresentedViewController as? UIAlertController).notTo(beNil())
+                    }
+                    it("should present alert controller with title Error") {
+                        let alertController = presenter.capturedPresentedViewController as! UIAlertController
+                        expect(alertController.title) == "Error"
+                    }
+                    it("should present alert controller with message 'Failed to create stream item!'") {
+                        let alertController = presenter.capturedPresentedViewController as! UIAlertController
+                        expect(alertController.message) == "Failed to create stream item!"
                     }
                 }
             }

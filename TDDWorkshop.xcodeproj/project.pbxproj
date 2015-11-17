@@ -10,7 +10,6 @@
 		43FA23BF1BF8811900A5AD35 /* SpeakersCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27A9F0CC5F26F99BDEC1E9D /* SpeakersCollectionViewLayout.swift */; };
 		51043027EBDFCEFE5D0A73F1 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51043554A6BA672E01979F0C /* Colors.swift */; };
 		5104307313CB15930541CF03 /* StreamItemCreatorFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5104385522E2286683C8940F /* StreamItemCreatorFake.swift */; };
-		510430B6C0CDE99C22E463B9 /* StreamItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51043965731D049BEFDA67AC /* StreamItemViewController.swift */; };
 		51043121927C1E86982B46CC /* Configurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51043F88A84283ECD6996069 /* Configurator.swift */; };
 		51043170B138F85CA2F8AABF /* StreamItemCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510433D1B42097AB77025094 /* StreamItemCreator.swift */; };
 		510431E1C6664364B83AB52E /* StreamItemCreatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510439BC04764BB07E409C37 /* StreamItemCreatorSpec.swift */; };
@@ -27,6 +26,7 @@
 		510436B2B0F419B81E1D35CA /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51043B621FA473AFA12F742A /* Configuration.swift */; };
 		51043771E48EF9925E8EF8AD /* AgendaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5104375B7F4D2F27F5B3423A /* AgendaViewController.swift */; };
 		5104378055DE0B4EE1A8F442 /* ItemCreating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510435951C61E707FA5D3004 /* ItemCreating.swift */; };
+		510437DA293B9850CB5ADFEA /* StreamItemViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510430359B6D6EB27730607D /* StreamItemViewControllerSpec.swift */; };
 		5104389B3A339A2B861CAFEA /* StreamItemDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510438463E71DDBDF78EC29A /* StreamItemDownloader.swift */; };
 		510438B5A55475B2E0049DB8 /* MediaResourceTypeAvailability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510439B03F6E57C8076717EF /* MediaResourceTypeAvailability.swift */; };
 		510438EB7A7B1374F5613A83 /* TestStreamItemCreatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51043665E727A35C29AAFA42 /* TestStreamItemCreatorDelegate.swift */; };
@@ -45,6 +45,7 @@
 		51043CFEC026B2EA54D725A9 /* StreamItemUploaderFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51043F3546921619F45D7FEE /* StreamItemUploaderFake.swift */; };
 		51043D2FD730B3804D6CD26F /* StreamItemDownloaderFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51043AE336433B054928411F /* StreamItemDownloaderFake.swift */; };
 		51043D4F7E1A71544A394D05 /* ImageManipulating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510432896B09B1525A354AD8 /* ImageManipulating.swift */; };
+		51043F20539F46ABAE5CA019 /* StreamItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5104322AA5C6C30D4B13FE90 /* StreamItemViewController.swift */; };
 		51043F34360C2BBE216A27E2 /* MediaResourceTypeAvailabilityFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510430092BFA19DBD863E0EE /* MediaResourceTypeAvailabilityFake.swift */; };
 		51043F404C0E2D0414BAE37D /* ConfigurationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51043A835228933A3BC4F56F /* ConfigurationFactory.swift */; };
 		51043FA161D6333E1A439928 /* ImagePickerCreating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51043B1632D8201C3B8C5CB0 /* ImagePickerCreating.swift */; };
@@ -87,10 +88,12 @@
 		2E9205E1648BE5EFF553320D /* Pods-TDDWorkshopTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TDDWorkshopTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TDDWorkshopTests/Pods-TDDWorkshopTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4FB712EE2487B0C9E9FE5485 /* Pods_TDDWorkshopTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TDDWorkshopTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		510430092BFA19DBD863E0EE /* MediaResourceTypeAvailabilityFake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaResourceTypeAvailabilityFake.swift; sourceTree = "<group>"; };
+		510430359B6D6EB27730607D /* StreamItemViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamItemViewControllerSpec.swift; sourceTree = "<group>"; };
 		510430AFBBDF3557A5D8AF14 /* PollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PollViewController.swift; sourceTree = "<group>"; };
 		510430DB72E766E5E4F649BB /* ViewControllerPresenterFake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerPresenterFake.swift; sourceTree = "<group>"; };
 		510431356EF3B1546FF3BC5B /* UICollectionViewFake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionViewFake.swift; sourceTree = "<group>"; };
 		510431934953EA27586429FB /* ImagePickerFactoryFake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickerFactoryFake.swift; sourceTree = "<group>"; };
+		5104322AA5C6C30D4B13FE90 /* StreamItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamItemViewController.swift; sourceTree = "<group>"; };
 		510432896B09B1525A354AD8 /* ImageManipulating.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageManipulating.swift; sourceTree = "<group>"; };
 		510432A7D6CB6EADD41BB052 /* AlertActionCreating.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertActionCreating.swift; sourceTree = "<group>"; };
 		510433D1B42097AB77025094 /* StreamItemCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamItemCreator.swift; sourceTree = "<group>"; };
@@ -110,7 +113,6 @@
 		510438463E71DDBDF78EC29A /* StreamItemDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamItemDownloader.swift; sourceTree = "<group>"; };
 		5104385522E2286683C8940F /* StreamItemCreatorFake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamItemCreatorFake.swift; sourceTree = "<group>"; };
 		510439024D3A16644453FBF5 /* StreamItemUploaderSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamItemUploaderSpec.swift; sourceTree = "<group>"; };
-		51043965731D049BEFDA67AC /* StreamItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamItemViewController.swift; sourceTree = "<group>"; };
 		51043992847AFBB2B320921D /* StreamItemDownloaderSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamItemDownloaderSpec.swift; sourceTree = "<group>"; };
 		510439B03F6E57C8076717EF /* MediaResourceTypeAvailability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaResourceTypeAvailability.swift; sourceTree = "<group>"; };
 		510439BC04764BB07E409C37 /* StreamItemCreatorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamItemCreatorSpec.swift; sourceTree = "<group>"; };
@@ -215,14 +217,6 @@
 			path = Agenda;
 			sourceTree = "<group>";
 		};
-		510431123191A7C84DB2D581 /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				51043965731D049BEFDA67AC /* StreamItemViewController.swift */,
-			);
-			path = UI;
-			sourceTree = "<group>";
-		};
 		5104324D836308F5C548BAB5 /* Poll */ = {
 			isa = PBXGroup;
 			children = (
@@ -310,9 +304,10 @@
 				510437064268061B024AFB34 /* PhotoStreamViewController.swift */,
 				51043D867CB9F601F3B2D7B0 /* PhotoStreamViewControllerSpec.swift */,
 				51043C83C92809AB57E1A480 /* Model */,
-				510431123191A7C84DB2D581 /* UI */,
 				51043E2525F90B539767A93B /* PhotoStreamCell.swift */,
 				51043CFCB812DE53D6F3724E /* PhotoStreamLayout.swift */,
+				5104322AA5C6C30D4B13FE90 /* StreamItemViewController.swift */,
+				510430359B6D6EB27730607D /* StreamItemViewControllerSpec.swift */,
 			);
 			path = PhotoStream;
 			sourceTree = "<group>";
@@ -652,7 +647,6 @@
 				5104389B3A339A2B861CAFEA /* StreamItemDownloader.swift in Sources */,
 				51043BBCC8A7FA2100EFE659 /* StreamItemUploader.swift in Sources */,
 				51043170B138F85CA2F8AABF /* StreamItemCreator.swift in Sources */,
-				510430B6C0CDE99C22E463B9 /* StreamItemViewController.swift in Sources */,
 				B27A91BCFEE01D5302624425 /* Speaker.swift in Sources */,
 				B27A99B3A1E7CE3647CFE6D0 /* SpeakersCollectionViewDataSource.swift in Sources */,
 				B27A978F0B8D18365F720D8E /* AppDelegate.swift in Sources */,
@@ -674,6 +668,7 @@
 				5104378055DE0B4EE1A8F442 /* ItemCreating.swift in Sources */,
 				5104335B26865C71B1AA5B76 /* ItemDownloading.swift in Sources */,
 				5104355ABD50CA7D59B2CE7F /* ItemUploading.swift in Sources */,
+				51043F20539F46ABAE5CA019 /* StreamItemViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -700,6 +695,7 @@
 				51043CFEC026B2EA54D725A9 /* StreamItemUploaderFake.swift in Sources */,
 				51043651C963EA17BAF5797A /* UICollectionViewFake.swift in Sources */,
 				510438F61CBE8E7C1F504D27 /* UIRefreshControlFake.swift in Sources */,
+				510437DA293B9850CB5ADFEA /* StreamItemViewControllerSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

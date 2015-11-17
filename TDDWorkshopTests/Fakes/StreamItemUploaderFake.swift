@@ -7,7 +7,13 @@ import Foundation
 import TDDWorkshop
 
 class StreamItemUploaderFake: ItemUploading {
+
+    var uploadItemCalled = false
+    var capturedCompletion: ((Bool, ErrorType?) -> ())?
+
     func uploadItem(streamItem: StreamItem, completion: (Bool, ErrorType?) -> ()) {
+        uploadItemCalled = true
+        capturedCompletion = completion
     }
 
 }

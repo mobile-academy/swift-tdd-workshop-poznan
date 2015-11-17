@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -23,10 +24,10 @@
             </objects>
             <point key="canvasLocation" x="1663" y="-451"/>
         </scene>
-        <!--View Controller-->
+        <!--Stream Item View Controller-->
         <scene sceneID="kYH-dD-MHl">
             <objects>
-                <viewController id="ITZ-m5-57R" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StreamItemPreview" id="ITZ-m5-57R" customClass="StreamItemViewController" customModule="TDDWorkshop" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LSA-XE-eKw"/>
                         <viewControllerLayoutGuide type="bottom" id="Y4V-g9-C8I"/>
@@ -34,16 +35,35 @@
                     <view key="view" contentMode="scaleToFill" id="86v-Mg-wUY">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7Or-K4-dFy">
+                                <rect key="frame" x="20" y="84" width="560" height="496"/>
+                                <animations/>
+                            </imageView>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Y4V-g9-C8I" firstAttribute="top" secondItem="7Or-K4-dFy" secondAttribute="bottom" constant="20" id="4z6-tJ-7FQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7Or-K4-dFy" secondAttribute="trailing" id="6pM-8Y-vmf"/>
+                            <constraint firstItem="7Or-K4-dFy" firstAttribute="leading" secondItem="86v-Mg-wUY" secondAttribute="leadingMargin" id="ejN-cJ-tWo"/>
+                            <constraint firstItem="7Or-K4-dFy" firstAttribute="top" secondItem="LSA-XE-eKw" secondAttribute="bottom" constant="20" id="ndR-XA-WjL"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ZBl-Tr-RFz">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="fdx-oQ-t0r"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="fdx-oQ-t0r">
+                            <connections>
+                                <action selector="cancelBarButtonPressed:" destination="ITZ-m5-57R" id="KGk-G5-ZEJ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="imageView" destination="7Or-K4-dFy" id="hpk-dz-AFb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bT8-Th-cSB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2379" y="-440"/>
+            <point key="canvasLocation" x="2414" y="-355"/>
         </scene>
     </scenes>
 </document>
