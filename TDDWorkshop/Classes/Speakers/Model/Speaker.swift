@@ -7,11 +7,11 @@ import UIKit
 
 class Speaker {
 
-    let name: String;
-    let photo: UIImage?;
+    let name: String
+    let photo: UIImage?
 
     init(name:String, photo:UIImage?) {
         self.name = name
-        self.photo = photo;
+        self.photo = photo
     }
 }

@@ -70,7 +70,7 @@ class SpeakersViewController: UICollectionViewController {
         super.viewDidLayoutSubviews()
 
         let layout: UICollectionViewFlowLayout = self.collectionView!.collectionViewLayout as! UICollectionViewFlowLayout
-        layout.itemSize = CGSizeMake(CGRectGetWidth(self.view.bounds), 80);
+        layout.itemSize = CGSizeMake(CGRectGetWidth(self.view.bounds), 80)
     }
 }
 

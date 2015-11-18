@@ -35,23 +35,23 @@ class SpeakersCollectionViewLayout: UICollectionViewFlowLayout {
         var separatorsAttributes: Array<UICollectionViewLayoutAttributes> = Array()
 
         for layoutAttributes in attributes {
-            let isCellAttribute = layoutAttributes.representedElementCategory == .Cell;
+            let isCellAttribute = layoutAttributes.representedElementCategory == .Cell
             let isNotLastCellInSection = !self.isIndexPathLastInSection(indexPath: layoutAttributes.indexPath)
             if (isCellAttribute && isNotLastCellInSection) {
-                let separatorAttributes = self.layoutAttributesForDecorationViewOfKind(kind: "Separator", forCellAttributes:layoutAttributes);
+                let separatorAttributes = self.layoutAttributesForDecorationViewOfKind(kind: "Separator", forCellAttributes:layoutAttributes)
                 separatorsAttributes.append(separatorAttributes)
             }
         }
-        return separatorsAttributes;
+        return separatorsAttributes
     }
 
     private func layoutAttributesForDecorationViewOfKind(kind kind: String, forCellAttributes cellAttributes: UICollectionViewLayoutAttributes?) -> UICollectionViewLayoutAttributes {
         let indexPath = cellAttributes?.indexPath
 
         let decorationAttributes = UICollectionViewLayoutAttributes(forDecorationViewOfKind: "Separator", withIndexPath: indexPath!)
-        decorationAttributes.bounds = CGRectMake(0, 0, CGRectGetWidth(self.collectionView!.bounds), 1 / UIScreen.mainScreen().scale);
-        decorationAttributes.center = CGPointMake(CGRectGetMidX(self.collectionView!.bounds), CGRectGetMaxY(cellAttributes!.frame));
-        return decorationAttributes;
+        decorationAttributes.bounds = CGRectMake(0, 0, CGRectGetWidth(self.collectionView!.bounds), 1 / UIScreen.mainScreen().scale)
+        decorationAttributes.center = CGPointMake(CGRectGetMidX(self.collectionView!.bounds), CGRectGetMaxY(cellAttributes!.frame))
+        return decorationAttributes
     }
 
     private func isIndexPathLastInSection(indexPath indexPath: NSIndexPath) -> Bool {
