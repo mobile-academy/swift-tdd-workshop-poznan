@@ -39,7 +39,7 @@ class PhotoStreamViewControllerSpec: QuickSpec {
                 it("should download stream items") {
                     expect(downloader.downloadItemsCalled) == true
                 }
-                context("when download finishes") {
+                describe("when download finishes") {
                     var refreshControlFake: UIRefreshControlFake!
                     var collectionViewFake : UICollectionViewFake!
 
@@ -105,7 +105,7 @@ class PhotoStreamViewControllerSpec: QuickSpec {
                 it("should be set") {
                     expect(barButtonItem).notTo(beNil())
                 }
-                context("when pressed") {
+                describe("when pressed") {
                     beforeEach {
                         let action = barButtonItem!.action
                         viewController.performSelector(action, withObject: barButtonItem!)
@@ -126,7 +126,7 @@ class PhotoStreamViewControllerSpec: QuickSpec {
                     it("should upload item") {
                         expect(uploader.uploadItemCalled) == true
                     }
-                    context("when upload finished") {
+                    describe("when upload finished") {
                         var collectionViewFake : UICollectionViewFake!
 
                         beforeEach {
