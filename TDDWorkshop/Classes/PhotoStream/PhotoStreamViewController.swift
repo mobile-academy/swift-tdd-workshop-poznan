@@ -71,17 +71,18 @@ class PhotoStreamViewController: UICollectionViewController, ItemCreatingDelegat
     func didPullToRefresh(refreshControl: UIRefreshControl) {
         downloadStreamItems()
     }
-    
+
+    //TODO: Task 2
+    //TODO: To setup presented view controller override `prepareForSegue` method
+    //TODO: Segue ID is "StreamItemPrevieSegue"
+    //TODO: Get selected index path by quering `UICollectionView` with `indexPathsForSelectedItems` method
+    //TODO: Get selected `StreamItem` pass it to `destinationViewController` of `segue`
+
+    //TODO: Uncomment for Task 2
+    /*
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "StreamItemPrevieSegue" {
-            if let navController = segue.destinationViewController as? UINavigationController,
-                let viewController = navController.viewControllers.first as? StreamItemViewController,
-                let indexPaths = collectionView?.indexPathsForSelectedItems(),
-                let firstSelectedItem = indexPaths.first {
-                    viewController.streamItem = streamItems[firstSelectedItem.item]
-            }
-        }
     }
+    */
     
     //MARK: ItemCreatingDelegate
 
@@ -90,7 +91,9 @@ class PhotoStreamViewController: UICollectionViewController, ItemCreatingDelegat
             if success == false {
                 self?.presentErrorAlertWithMessage("Failed to upload stream item!")
             } else {
-                //TODO add item and reload
+                // TODO: Task 1
+                // TODO: add `item` to `streamItems`
+                // TODO: reload data on `collectionView`
             }
         }
     }

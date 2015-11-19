@@ -86,17 +86,6 @@ class PhotoStreamViewControllerSpec: QuickSpec {
                 }
             }
 
-            describe("UICollectionViewDelegate") {
-                var fixtureItem: StreamItem!
-                beforeEach {
-                    fixtureItem = StreamItem(title: "Foo", imageData: NSData())
-                    viewController.streamItems = [fixtureItem]
-                }
-                it("should present preview view controller when item is pressed") {
-                    //TODO
-                }
-            }
-
             describe("righ bar button item") {
                 var barButtonItem: UIBarButtonItem?
                 beforeEach {
@@ -138,12 +127,9 @@ class PhotoStreamViewControllerSpec: QuickSpec {
                             beforeEach {
                                 uploader.capturedCompletion?(true, nil)
                             }
-                            it("should insert newly added stream item") {
-                                //TODO
-                            }
-                            it("should reload collection view") {
-                                //TODO expect(collectionViewFake.reloadDataCalled) == true
-                            }
+                            //TODO: Task 1
+                            //TODO: add a test which checks if item is present in streamItems
+                            //TODO: add a test which checks if collection view is reloaded (use collection view fake)
                         }
                         context("with failure") {
                             beforeEach {
@@ -178,6 +164,18 @@ class PhotoStreamViewControllerSpec: QuickSpec {
                     it("should present alert controller with message 'Failed to create stream item!'") {
                         let alertController = presenter.capturedPresentedViewController as! UIAlertController
                         expect(alertController.message) == "Failed to create stream item!"
+                    }
+                }
+            }
+
+            //TODO: Task 2
+
+            describe("prepare for segue") {
+
+                describe("with identifier 'StreamItemPrevieSegue'") {
+
+                    beforeEach {
+
                     }
                 }
             }

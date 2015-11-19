@@ -37,7 +37,28 @@ class StreamItemCreatorSpec: QuickSpec {
 
             describe("create item") {
 
-                context("when library and camera are available") {
+                //TODO: Task 3
+                /*
+                context("when no source is available") {
+                    beforeEach {
+                        resourceAvailability.fakeSources = []
+                    }
+                }
+
+                context("when photo library is only available") {
+                   beforeEach {
+                        resourceAvailability.fakeSources = [.PhotoLibrary]
+                    }
+                }
+
+                context("when camera is only available") {
+                   beforeEach {
+                        resourceAvailability.fakeSources = [.Camera]
+                    }
+                }
+                */
+
+                context("when photo library and camera are available") {
                     beforeEach {
                         resourceAvailability.fakeSources = [.PhotoLibrary, .Camera]
                         creator.createStreamItem()
