@@ -37,7 +37,7 @@ class StreamItemCreator: NSObject, ItemCreating, UIImagePickerControllerDelegate
 
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String:AnyObject]) {
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
-            let scaledImage = imageManipulator.scaleImage(image, maxDimension: 800)
+            let scaledImage = imageManipulator.scaleImage(image, maxDimension: 500)
             let imageData = imageManipulator.dataFromImage(scaledImage, quality: 0.7)
             let streamItem = StreamItem(title: "Always the same", imageData: imageData)
             delegate?.creator(self, didCreateItem: streamItem)
