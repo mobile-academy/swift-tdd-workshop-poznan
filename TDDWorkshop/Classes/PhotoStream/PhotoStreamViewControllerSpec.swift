@@ -167,18 +167,6 @@ class PhotoStreamViewControllerSpec: QuickSpec {
                     }
                 }
             }
-
-            //TODO: Task 2
-
-            describe("prepare for segue") {
-
-                describe("with identifier 'StreamItemPrevieSegue'") {
-
-                    beforeEach {
-
-                    }
-                }
-            }
         }
     }
 }

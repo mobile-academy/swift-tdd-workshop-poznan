@@ -30,12 +30,12 @@ class StreamItemCreator: NSObject, ItemCreating, UIImagePickerControllerDelegate
     //MARK: ItemCreating
 
     func createStreamItem() {
-        //TODO: Task 3
+        //TODO: Task 2
         //TODO: check the available source types from `resourceAvailability`
         //TODO: if it's empty, inform delegate about error
         //TODO: if it contains single element, present `UIImagePickerController`
         //TODO: if it contains more then one element, present `UIAlertControler` so user has to pick source
-        presentAlertController()
+        presentSourcesActionSheet()
     }
 
     //MARK: UIImagePickerControllerDelegate
@@ -46,7 +46,7 @@ class StreamItemCreator: NSObject, ItemCreating, UIImagePickerControllerDelegate
             let imageData = imageManipulator.dataFromImage(scaledImage, quality: 0.7)
             let streamItem = StreamItem(title: "Always the same", imageData: imageData)
 
-            //TODO: Home assignment
+            //TODO: Task 3
             //TODO: Fix issue that all stream items have the same, hardcoded title
             //TODO: Test and refactor code around image scaling
             //TODO: Prompt user with an alert with text field, so he can provide title
@@ -65,7 +65,7 @@ class StreamItemCreator: NSObject, ItemCreating, UIImagePickerControllerDelegate
 
     //MARK: Private methods
 
-    private func presentAlertController() {
+    private func presentSourcesActionSheet() {
         let alertController = UIAlertController(title: "Add new Item to the stream", message: nil, preferredStyle: .ActionSheet)
 
         let availableSources = resourceAvailability.availableSources()

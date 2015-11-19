@@ -17,7 +17,7 @@ class DefaultImageManipulator: ImageManipulating {
 
     func scaleImage(image: UIImage, maxDimension: Int) -> UIImage {
         let size = CGSize(width: maxDimension, height: maxDimension)
-        return image.resizedImageToSize(size)
+        return image.resizedImageToFitInSize(size, scaleIfSmaller: true)
     }
 
     func dataFromImage(image: UIImage, quality: Float) -> NSData {

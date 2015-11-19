@@ -10,7 +10,7 @@ class StreamItemViewControllerSpec: QuickSpec {
             var sut: StreamItemViewController!
 
             beforeEach {
-                let storyboard = UIStoryboard(name: "StreamItemPreview", bundle: nil)
+                let storyboard = UIStoryboard(name: "PhotoStream", bundle: nil)
                 sut = storyboard.instantiateViewControllerWithIdentifier("StreamItemPreview") as! StreamItemViewController
             }
             it("should work") {

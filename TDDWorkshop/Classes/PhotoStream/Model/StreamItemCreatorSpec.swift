@@ -37,7 +37,7 @@ class StreamItemCreatorSpec: QuickSpec {
 
             describe("create item") {
 
-                //TODO: Task 3
+                //TODO: Task 2
                 /*
                 context("when no source is available") {
                     beforeEach {
@@ -160,6 +160,9 @@ class StreamItemCreatorSpec: QuickSpec {
                             sut.imagePickerController(picker,
                                     didFinishPickingMediaWithInfo: [UIImagePickerControllerOriginalImage: image])
                         }
+                        //TODO: Task 3
+                        //TODO: implement functionality which asks user about item title
+
                         it("should scale selected image using Image Manipulator") {
                             expect(imageManipulator.capturedImageToScale).notTo(beNil())
                             expect(imageManipulator.capturedImageToScale!) == image

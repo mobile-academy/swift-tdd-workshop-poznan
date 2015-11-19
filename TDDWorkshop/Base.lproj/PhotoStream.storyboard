@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Photo Stream-->
@@ -58,7 +59,7 @@
                                 <size key="customSize" width="100" height="100"/>
                                 <connections>
                                     <outlet property="imageView" destination="aj0-AW-ggU" id="ktZ-zm-TcV"/>
-                                    <segue destination="XSI-Sg-erK" kind="showDetail" identifier="StreamItemPrevieSegue" id="3ca-uV-0bd"/>
+                                    <segue destination="lhx-e1-8ze" kind="showDetail" identifier="StreamItemPreviewSegue" id="qAt-t3-mRw"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -81,13 +82,75 @@
             </objects>
             <point key="canvasLocation" x="823" y="-410"/>
         </scene>
-        <!--StreamItemPreview-->
-        <scene sceneID="Lnu-GE-0rh">
+        <!--Stream Item View Controller-->
+        <scene sceneID="IDH-d7-nCg">
             <objects>
-                <viewControllerPlaceholder storyboardName="StreamItemPreview" id="XSI-Sg-erK" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zYz-kM-Ync" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="StreamItemPreview" id="lhx-e1-8ze" customClass="StreamItemViewController" customModule="TDDWorkshop" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HmY-MH-O6t"/>
+                        <viewControllerLayoutGuide type="bottom" id="QNc-WO-dYj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EwG-jv-gq5">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OBZ-eV-hN5">
+                                <rect key="frame" x="20" y="20" width="39" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Close">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelBarButtonPressed:" destination="lhx-e1-8ze" eventType="touchUpInside" id="tpH-J6-Qw3"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dMK-5e-Bct">
+                                <rect key="frame" x="40" y="50" width="520" height="530"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="520" id="dmN-2y-FJT"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="dmN-2y-FJT"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="leadingMargin" secondItem="OBZ-eV-hN5" secondAttribute="leading" id="348-9J-xFz"/>
+                            <constraint firstItem="dMK-5e-Bct" firstAttribute="centerY" secondItem="EwG-jv-gq5" secondAttribute="centerY" id="4ll-ZA-6o7"/>
+                            <constraint firstItem="dMK-5e-Bct" firstAttribute="centerY" secondItem="EwG-jv-gq5" secondAttribute="centerY" id="8EK-xm-vKJ"/>
+                            <constraint firstItem="OBZ-eV-hN5" firstAttribute="top" secondItem="HmY-MH-O6t" secondAttribute="bottom" id="GP3-ha-ddJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dMK-5e-Bct" secondAttribute="trailing" constant="20" id="MGl-kt-zen"/>
+                            <constraint firstItem="dMK-5e-Bct" firstAttribute="width" secondItem="EwG-jv-gq5" secondAttribute="width" id="NnL-0j-i2N"/>
+                            <constraint firstItem="dMK-5e-Bct" firstAttribute="centerX" secondItem="EwG-jv-gq5" secondAttribute="centerX" id="WlN-U1-XGS"/>
+                            <constraint firstItem="dMK-5e-Bct" firstAttribute="centerX" secondItem="EwG-jv-gq5" secondAttribute="centerX" id="aWg-mp-cZz"/>
+                            <constraint firstItem="dMK-5e-Bct" firstAttribute="leading" secondItem="EwG-jv-gq5" secondAttribute="leadingMargin" constant="20" id="dP9-yf-nAa"/>
+                            <constraint firstItem="dMK-5e-Bct" firstAttribute="centerY" secondItem="EwG-jv-gq5" secondAttribute="centerY" id="vmc-Be-QyB"/>
+                            <constraint firstItem="dMK-5e-Bct" firstAttribute="centerX" secondItem="EwG-jv-gq5" secondAttribute="centerX" id="xcu-Mw-deE"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="4ll-ZA-6o7"/>
+                                <exclude reference="MGl-kt-zen"/>
+                                <exclude reference="NnL-0j-i2N"/>
+                                <exclude reference="WlN-U1-XGS"/>
+                                <exclude reference="dP9-yf-nAa"/>
+                                <exclude reference="vmc-Be-QyB"/>
+                                <exclude reference="xcu-Mw-deE"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="dMK-5e-Bct" id="UhB-rU-HXI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VF5-t9-7KP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1576.5" y="-410"/>
+            <point key="canvasLocation" x="1592" y="-386"/>
         </scene>
     </scenes>
     <resources>

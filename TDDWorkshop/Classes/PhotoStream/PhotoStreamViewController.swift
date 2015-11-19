@@ -61,33 +61,30 @@ class PhotoStreamViewController: UICollectionViewController, ItemCreatingDelegat
         }
         return cell
     }
-    
+
     //MARK: Actions
-    
+
     @IBAction func didPressAddItemBarButtonItem(sender: UIBarButtonItem!) {
         creator.createStreamItem()
     }
-    
+
     func didPullToRefresh(refreshControl: UIRefreshControl) {
         downloadStreamItems()
     }
 
-    //TODO: Task 2
-    //TODO: To setup presented view controller override `prepareForSegue` method
-    //TODO: Segue ID is "StreamItemPrevieSegue"
-    //TODO: Get selected index path by quering `UICollectionView` with `indexPathsForSelectedItems` method
-    //TODO: Get selected `StreamItem` pass it to `destinationViewController` of `segue`
-
-    //TODO: Uncomment for Task 2
-    /*
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let itemViewController = segue.destinationViewController as? StreamItemViewController,
+        let cell = sender as? UICollectionViewCell,
+        let indexPath = collectionView?.indexPathForCell(cell) {
+            itemViewController.streamItem = streamItems[indexPath.item]
+        }
     }
-    */
-    
+
     //MARK: ItemCreatingDelegate
 
     func creator(creator: ItemCreating, didCreateItem item: StreamItem) {
-        uploader.uploadItem(item) {[weak self] success, error in
+        uploader.uploadItem(item) {
+            [weak self] success, error in
             if success == false {
                 self?.presentErrorAlertWithMessage("Failed to upload stream item!")
             } else {
@@ -106,7 +103,8 @@ class PhotoStreamViewController: UICollectionViewController, ItemCreatingDelegat
 
     private func presentErrorAlertWithMessage(message: String) {
         let errorAlert = UIAlertController(title: "Error", message: message, preferredStyle: .Alert)
-        errorAlert.addAction(alertActionFactory.createActionWithTitle("Cancel", style: .Cancel) {action in })
+        errorAlert.addAction(alertActionFactory.createActionWithTitle("Cancel", style: .Cancel) {
+            action in })
         presenter.presentViewController(errorAlert)
     }
 
@@ -117,7 +115,8 @@ class PhotoStreamViewController: UICollectionViewController, ItemCreatingDelegat
     }
 
     private func downloadStreamItems() {
-        downloader.downloadItems {[weak self] items, error in
+        downloader.downloadItems {
+            [weak self] items, error in
             self?.refreshControl.endRefreshing()
             if error != nil || items == nil {
                 self?.presentErrorAlertWithMessage("Failed to download stream items!")
