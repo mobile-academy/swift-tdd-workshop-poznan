@@ -4,15 +4,22 @@
 
 import Foundation
 
-class ResourceTypeAvailability {
+protocol SourceTypeAvailability {
+    func availableSources() -> [UIImagePickerControllerSourceType]
+}
+
+class DefaultSourceTypeProvider: SourceTypeAvailability {
 
     //MARK: Public methods
 
-    func photoLibraryAvailable() -> Bool {
-        return UIImagePickerController.isSourceTypeAvailable(.PhotoLibrary)
-    }
-
-    func cameraAvailable() -> Bool {
-        return UIImagePickerController.isSourceTypeAvailable(.Camera)
+    func availableSources() -> [UIImagePickerControllerSourceType] {
+        var availableTypes = [UIImagePickerControllerSourceType]()
+        if UIImagePickerController.isSourceTypeAvailable(.PhotoLibrary) {
+            availableTypes.append(.PhotoLibrary)
+        }
+        if UIImagePickerController.isSourceTypeAvailable(.Camera) {
+            availableTypes.append(.Camera)
+        }
+        return availableTypes
     }
 }

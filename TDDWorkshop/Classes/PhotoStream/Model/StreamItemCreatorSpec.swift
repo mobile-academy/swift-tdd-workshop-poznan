@@ -13,14 +13,14 @@ class StreamItemCreatorSpec: QuickSpec {
             var testDelegate: TestStreamItemCreatorDelegate!
 
             var presenter: ViewControllerPresenterFake!
-            var resourceAvailability: MediaResourceTypeAvailabilityFake!
+            var resourceAvailability: SourceTypeAvailabilityFake!
             var alertActionFactory: AlertActionFactoryFake!
             var pickerFactory: ImagePickerFactoryFake!
             var imageManipulator: ImageManipulatorFake!
 
             beforeEach {
                 presenter = ViewControllerPresenterFake()
-                resourceAvailability = MediaResourceTypeAvailabilityFake()
+                resourceAvailability = SourceTypeAvailabilityFake()
                 alertActionFactory = AlertActionFactoryFake()
                 pickerFactory = ImagePickerFactoryFake()
                 imageManipulator = ImageManipulatorFake()
@@ -39,8 +39,7 @@ class StreamItemCreatorSpec: QuickSpec {
 
                 context("when library and camera are available") {
                     beforeEach {
-                        resourceAvailability.fakeCameraAvailability = true
-                        resourceAvailability.fakePhotoLibraryAvailability = true
+                        resourceAvailability.fakeSources = [.PhotoLibrary, .Camera]
                         creator.createStreamItem()
                     }
                     it("should present alert controller") {
@@ -165,42 +164,6 @@ class StreamItemCreatorSpec: QuickSpec {
                         }
                     }
                 }
-
-//TODO this will be excercise
-/*
-                context("when library is only available") {
-                    beforeEach {
-                        resourceAvailability.fakeCameraAvailability = false
-                        resourceAvailability.fakePhotoLibraryAvailability = true
-                        creator.createStreamItem()
-                    }
-                    it("should NOT present alert controller") {
-                        expect(presenter.capturedViewController as? UIAlertController).to(beNil())
-                    }
-                    it("should present image picker") {
-                        expect(presenter.capturedViewController as? UIImagePickerController).notTo(beNil())
-                    }
-                    it("should present image picker with proper media type") {
-
-                    }
-                }
-                context("when camera is only available") {
-                    beforeEach {
-                        resourceAvailability.fakeCameraAvailability = true
-                        resourceAvailability.fakePhotoLibraryAvailability = false
-                        creator.createStreamItem()
-                    }
-                    it("should NOT present alert controller") {
-                        expect(presenter.capturedViewController as? UIAlertController).to(beNil())
-                    }
-                    it("should present image picker") {
-                        expect(presenter.capturedViewController as? UIImagePickerController).notTo(beNil())
-                    }
-                    it("should present image picker with proper media type") {
-
-                    }
-                }
-*/
             }
         }
     }
