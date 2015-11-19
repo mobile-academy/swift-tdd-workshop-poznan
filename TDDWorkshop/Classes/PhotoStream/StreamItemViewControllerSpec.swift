@@ -7,14 +7,14 @@ import TDDWorkshop
 class StreamItemViewControllerSpec: QuickSpec {
     override func spec() {
         describe("StreamItemViewController") {
-            var viewController: StreamItemViewController!
+            var sut: StreamItemViewController!
 
             beforeEach {
                 let storyboard = UIStoryboard(name: "StreamItemPreview", bundle: nil)
-                viewController = storyboard.instantiateViewControllerWithIdentifier("StreamItemPreview") as! StreamItemViewController
+                sut = storyboard.instantiateViewControllerWithIdentifier("StreamItemPreview") as! StreamItemViewController
             }
             it("should work") {
-                expect(viewController).notTo(beNil())
+                expect(sut).notTo(beNil())
             }
         }
     }

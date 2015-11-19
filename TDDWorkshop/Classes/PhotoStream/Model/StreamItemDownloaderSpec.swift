@@ -9,12 +9,12 @@ class StreamItemDownloaderSpec: QuickSpec {
     override func spec() {
         describe("StreamItemDownloader") {
 
-            var itemDownloader: StreamItemDownloader!
+            var sut: StreamItemDownloader!
             var parseAdapter: ParseAdapterFake!
 
             beforeEach {
                 parseAdapter = ParseAdapterFake()
-                itemDownloader = StreamItemDownloader(parseAdapter: parseAdapter)
+                sut = StreamItemDownloader(parseAdapter: parseAdapter)
             }
 
             describe("download items") {
@@ -23,7 +23,7 @@ class StreamItemDownloaderSpec: QuickSpec {
                 var capturedError: ErrorType?
 
                 beforeEach {
-                    itemDownloader.downloadItems {
+                    sut.downloadItems {
                         items, error in
                         downloadedItems = items
                         capturedError = error

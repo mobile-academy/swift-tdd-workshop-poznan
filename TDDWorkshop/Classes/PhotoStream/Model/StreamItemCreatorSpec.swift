@@ -8,7 +8,7 @@ class StreamItemCreatorSpec: QuickSpec {
     override func spec() {
         describe("StreamItemCreator") {
 
-            var creator: StreamItemCreator!
+            var sut: StreamItemCreator!
 
             var testDelegate: TestStreamItemCreatorDelegate!
 
@@ -25,14 +25,14 @@ class StreamItemCreatorSpec: QuickSpec {
                 pickerFactory = ImagePickerFactoryFake()
                 imageManipulator = ImageManipulatorFake()
 
-                creator = StreamItemCreator(presenter: presenter)
-                creator.resourceAvailability = resourceAvailability
-                creator.actionFactory = alertActionFactory
-                creator.pickerFactory = pickerFactory
-                creator.imageManipulator = imageManipulator
+                sut = StreamItemCreator(presenter: presenter)
+                sut.resourceAvailability = resourceAvailability
+                sut.actionFactory = alertActionFactory
+                sut.pickerFactory = pickerFactory
+                sut.imageManipulator = imageManipulator
 
                 testDelegate = TestStreamItemCreatorDelegate()
-                creator.delegate = testDelegate
+                sut.delegate = testDelegate
             }
 
             describe("create item") {
@@ -61,7 +61,7 @@ class StreamItemCreatorSpec: QuickSpec {
                 context("when photo library and camera are available") {
                     beforeEach {
                         resourceAvailability.fakeSources = [.PhotoLibrary, .Camera]
-                        creator.createStreamItem()
+                        sut.createStreamItem()
                     }
                     it("should present alert controller") {
                         expect(presenter.capturedPresentedViewController as? UIAlertController).notTo(beNil())
@@ -157,7 +157,7 @@ class StreamItemCreatorSpec: QuickSpec {
 
                     context("did pick media") {
                         beforeEach {
-                            creator.imagePickerController(picker,
+                            sut.imagePickerController(picker,
                                     didFinishPickingMediaWithInfo: [UIImagePickerControllerOriginalImage: image])
                         }
                         it("should scale selected image using Image Manipulator") {
@@ -178,7 +178,7 @@ class StreamItemCreatorSpec: QuickSpec {
                     }
                     context("did cancel") {
                         beforeEach {
-                            creator.imagePickerControllerDidCancel(picker)
+                            sut.imagePickerControllerDidCancel(picker)
                         }
                         it("should dismiss image picker") {
                             expect(presenter.capturedDismissedViewController as? UIImagePickerController).notTo(beNil())

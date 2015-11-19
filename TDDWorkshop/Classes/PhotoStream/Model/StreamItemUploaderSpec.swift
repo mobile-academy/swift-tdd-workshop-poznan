@@ -8,12 +8,12 @@ class StreamItemUploaderSpec: QuickSpec {
     override func spec() {
         describe("StreamItemUploader") {
 
-            var uploader: StreamItemUploader!
+            var sut: StreamItemUploader!
             var parseAdapter: ParseAdapterFake!
 
             beforeEach {
                 parseAdapter = ParseAdapterFake()
-                uploader = StreamItemUploader(parseAdapter: parseAdapter)
+                sut = StreamItemUploader(parseAdapter: parseAdapter)
             }
 
             describe("upload item") {
@@ -25,7 +25,7 @@ class StreamItemUploaderSpec: QuickSpec {
                 beforeEach {
                     fixtureItem = StreamItem(title: "Foo Bar", imageData: NSData())
                     capturedSuccess = nil
-                    uploader.uploadItem(fixtureItem) {
+                    sut.uploadItem(fixtureItem) {
                         success, error in
                         capturedSuccess = success
                         capturedError = error

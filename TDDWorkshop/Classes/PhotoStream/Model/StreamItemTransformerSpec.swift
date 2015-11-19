@@ -9,10 +9,10 @@ class StreamItemTransformerSpec: QuickSpec {
     override func spec() {
 
         describe("StreamItemTransformer") {
-            var transformer: StreamItemTransformer!
+            var sut: StreamItemTransformer!
 
             beforeEach {
-                transformer = StreamItemTransformer()
+                sut = StreamItemTransformer()
             }
 
             describe("transform stream item into Parse object") {
@@ -22,7 +22,7 @@ class StreamItemTransformerSpec: QuickSpec {
 
                 beforeEach {
                     streamItem = StreamItem(title: "Foo 123", imageData: fakeImageData)
-                    parseObject = transformer.parseObjectFromStreamItem(streamItem)
+                    parseObject = sut.parseObjectFromStreamItem(streamItem)
                 }
                 it("should set title under 'title' key") {
                     let title = parseObject["title"] as? String
@@ -49,7 +49,7 @@ class StreamItemTransformerSpec: QuickSpec {
                     beforeEach {
                         parseObject["title"] = "Foo Bar"
                         parseObject["imageData"] = fakeImageData
-                        streamItem = transformer.streamItemFromParseObject(parseObject)
+                        streamItem = sut.streamItemFromParseObject(parseObject)
                     }
                     it("should create Stream Item") {
                         expect(streamItem).notTo(beNil())
@@ -64,7 +64,7 @@ class StreamItemTransformerSpec: QuickSpec {
                 context("when it does NOT have title") {
                     beforeEach {
                         parseObject["imageData"] = NSData()
-                        streamItem = transformer.streamItemFromParseObject(parseObject)
+                        streamItem = sut.streamItemFromParseObject(parseObject)
                     }
                     it("should NOT create Stream Item") {
                         expect(streamItem).to(beNil())
@@ -73,7 +73,7 @@ class StreamItemTransformerSpec: QuickSpec {
                 context("when it does NOT have image data") {
                     beforeEach {
                         parseObject["title"] = "Foo Bar"
-                        streamItem = transformer.streamItemFromParseObject(parseObject)
+                        streamItem = sut.streamItemFromParseObject(parseObject)
                     }
                     it("should NOT create Stream Item") {
                         expect(streamItem).to(beNil())
@@ -81,7 +81,7 @@ class StreamItemTransformerSpec: QuickSpec {
                 }
                 context("when it does NOT have title, NOR image data") {
                     beforeEach {
-                        streamItem = transformer.streamItemFromParseObject(parseObject)
+                        streamItem = sut.streamItemFromParseObject(parseObject)
                     }
                     it("should NOT create Stream Item") {
                         expect(streamItem).to(beNil())
