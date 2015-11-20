@@ -80,16 +80,24 @@ Add suffix `Fake` to the class fake, e.g `Foo` should have `FooFake`.
 
 ## Variables in tests
 
-We have to decide how to define variables in specs: optionals vs implicitly unwrapped optionals, e.g:
+Subject under test variables should be declared as explicitly unwrapped (it's really bad if your `sut` is nil):
 ```swift
+
+var foo: Bar!
+
 beforeEach {
-	var foo: Bar?
+	foo = Bar()
 }
 ```
-vs.
+
+Other variables should be declared as optionals:
+
 ```swift
+
+var foo: Bar?
+
 beforeEach {
-	var foo: Bar!
+	foo = (...)
 }
 ```
 
