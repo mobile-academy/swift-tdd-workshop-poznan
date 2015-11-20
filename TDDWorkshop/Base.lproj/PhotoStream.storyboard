@@ -42,7 +42,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PhotoStream" translatesAutoresizingMaskIntoConstraints="NO" id="aj0-AW-ggU">
-                                            <rect key="frame" x="38" y="41" width="24" height="19"/>
+                                            <rect key="frame" x="0.0" y="0.5" width="100" height="100"/>
                                             <animations/>
                                             <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                         </imageView>
@@ -54,6 +54,8 @@
                                 <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="aj0-AW-ggU" firstAttribute="centerY" secondItem="ZPH-Px-pLS" secondAttribute="centerY" id="ea9-xE-8eL"/>
+                                    <constraint firstItem="aj0-AW-ggU" firstAttribute="height" secondItem="ZPH-Px-pLS" secondAttribute="height" id="jbZ-RN-Pfa"/>
+                                    <constraint firstItem="aj0-AW-ggU" firstAttribute="width" secondItem="ZPH-Px-pLS" secondAttribute="width" id="rqZ-Jr-UQW"/>
                                     <constraint firstItem="aj0-AW-ggU" firstAttribute="centerX" secondItem="ZPH-Px-pLS" secondAttribute="centerX" id="xLg-GJ-3Ob"/>
                                 </constraints>
                                 <size key="customSize" width="100" height="100"/>
@@ -104,8 +106,8 @@
                                     <action selector="cancelBarButtonPressed:" destination="lhx-e1-8ze" eventType="touchUpInside" id="tpH-J6-Qw3"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dMK-5e-Bct">
-                                <rect key="frame" x="40" y="50" width="520" height="530"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PhotoStream" translatesAutoresizingMaskIntoConstraints="NO" id="dMK-5e-Bct">
+                                <rect key="frame" x="288" y="290.5" width="24" height="19"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="520" id="dmN-2y-FJT"/>
