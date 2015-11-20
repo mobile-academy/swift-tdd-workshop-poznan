@@ -19,8 +19,6 @@ class SpeakerCollectionViewCell : UICollectionViewCell {
         super.init(frame: frame)
         
         self.titleLabel.setContentHuggingPriority(UILayoutPriorityDefaultLow, forAxis: UILayoutConstraintAxis.Horizontal)
-        self.titleLabel.backgroundColor = UIColor.redColor()
-        self.imageView.backgroundColor = UIColor.greenColor()
 
         self.imageView.setContentHuggingPriority(UILayoutPriorityRequired, forAxis: UILayoutConstraintAxis.Horizontal)
         self.imageView.setContentCompressionResistancePriority(UILayoutPriorityRequired, forAxis: UILayoutConstraintAxis.Vertical)

@@ -26,6 +26,7 @@ import UIKit
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(SpeakerCellIdentifier, forIndexPath: indexPath) as! SpeakerCollectionViewCell
         cell.titleLabel.text = self.speakers[indexPath.row].name
+        cell.imageView.image = self.speakers[indexPath.row].photo
         return cell
     }
 }

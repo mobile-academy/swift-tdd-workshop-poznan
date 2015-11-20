@@ -45,14 +45,12 @@ class SpeakersViewControllerSpec: QuickSpec {
                         layout = view?.collectionViewLayout as? UICollectionViewFlowLayout
                     }
 
-                    it("should be a flow layout") {
-                        expect(layout).to(beAKindOf(UICollectionViewFlowLayout))
-                    }
+                    //TODO: Just don't forget to implement test for layout before doing the workshop
 
                     describe("when the view lays itself out") {
 
                         beforeEach {
-                            sut.view.bounds = CGRectMake(0, 0, 42, 43)
+                            sut.view.bounds = CGRectMake(0, 0, 42, 120)
                             sut.view.layoutIfNeeded()
                         }
 
