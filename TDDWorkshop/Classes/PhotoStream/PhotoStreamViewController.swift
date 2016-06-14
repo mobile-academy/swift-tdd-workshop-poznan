@@ -106,7 +106,7 @@ class PhotoStreamViewController: UICollectionViewController, ItemCreatingDelegat
     }
 
     private func setupCollectionView() {
-        refreshControl.addTarget(self, action: "didPullToRefresh:", forControlEvents: UIControlEvents.ValueChanged)
+        refreshControl.addTarget(self, action: #selector(didPullToRefresh), forControlEvents: UIControlEvents.ValueChanged)
         collectionView?.addSubview(refreshControl)
         collectionView?.alwaysBounceVertical = true
     }

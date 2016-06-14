@@ -37,7 +37,7 @@ class PollViewController: FormViewController {
         self.navigationItem.rightBarButtonItem =
                 PollManager.sharedInstance.pollAlreadySent
                 ? nil
-                : UIBarButtonItem(title: "Send", style: .Plain, target: self, action: "didTapSend")
+                : UIBarButtonItem(title: "Send", style: .Plain, target: self, action: #selector(didTapSend))
 
     }
 
