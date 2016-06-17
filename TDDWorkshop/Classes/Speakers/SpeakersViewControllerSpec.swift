@@ -80,7 +80,7 @@ class SpeakersViewControllerSpec: QuickSpec {
 
                 describe("speakers") {
 
-                    var speakers: Array<Speaker>?
+                    var speakers: [Speaker]?
 
                     beforeEach {
                         speakers = dataSource?.speakers

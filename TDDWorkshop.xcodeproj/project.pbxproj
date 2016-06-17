@@ -66,10 +66,12 @@
 		94DCC8191BFA573600ABEF01 /* Speakers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94DCC8181BFA573600ABEF01 /* Speakers.storyboard */; };
 		A1DFDFA51BF3D126007D3C33 /* PollManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DFDFA41BF3D126007D3C33 /* PollManager.swift */; };
 		B27A91BCFEE01D5302624425 /* Speaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27A97ECFEB155F0C61B235C /* Speaker.swift */; };
+		B27A93AEFE34DF3A2FD81E1A /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27A98B9B420C52251EF25DD /* NavigationController.swift */; };
 		B27A9435A5125ABF50C02EB4 /* SpeakersCollectionViewDataSourceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27A9A9CFA5BBA8E9E675BF3 /* SpeakersCollectionViewDataSourceSpec.swift */; };
 		B27A955351ED55B52C8EA3DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B27A9C9666F8AA72EFA81291 /* Assets.xcassets */; };
 		B27A978F0B8D18365F720D8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27A9E63F868EFA7E3B1992D /* AppDelegate.swift */; };
 		B27A99B3A1E7CE3647CFE6D0 /* SpeakersCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27A91C4E7A0EF507D03444F /* SpeakersCollectionViewDataSource.swift */; };
+		B27A9A86089F1AB17A7DCF36 /* MobileAcademyStyleSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27A9EC017CC555822C2C7EB /* MobileAcademyStyleSheet.swift */; };
 		B27A9D49C4908E6CD130E12C /* SpeakerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27A9DC5B146671A6A47AD0F /* SpeakerCollectionViewCell.swift */; };
 		B27A9D7C0AB6A484AB5BD296 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B27A9BC97F002D3AA2328CD6 /* LaunchScreen.storyboard */; };
 		B27A9D82F37544CEEAC47248 /* SpeakersViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27A927D750AD170429319F9 /* SpeakersViewControllerSpec.swift */; };
@@ -142,9 +144,9 @@
 		798B4C54E5DA9694E4F2D7F0 /* Pods-TDDWorkshopTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TDDWorkshopTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TDDWorkshopTests/Pods-TDDWorkshopTests.debug.xcconfig"; sourceTree = "<group>"; };
 		86F2B4051BFD372D00AACB4C /* AgendaItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgendaItemCell.swift; sourceTree = "<group>"; };
 		90AC8F8C9A4F980094A8A846 /* Pods-TDDWorkshop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TDDWorkshop.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TDDWorkshop/Pods-TDDWorkshop.debug.xcconfig"; sourceTree = "<group>"; };
-		94DCC8111BFA570B00ABEF01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = TDDWorkshop/Base.lproj/Poll.storyboard; sourceTree = SOURCE_ROOT; };
+		94DCC8111BFA570B00ABEF01 /* Base */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Base; path = TDDWorkshop/Base.lproj/Poll.storyboard; sourceTree = SOURCE_ROOT; };
 		94DCC8131BFA571A00ABEF01 /* Agenda.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Agenda.storyboard; sourceTree = "<group>"; };
-		94DCC8161BFA572700ABEF01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = TDDWorkshop/Base.lproj/PhotoStream.storyboard; sourceTree = SOURCE_ROOT; };
+		94DCC8161BFA572700ABEF01 /* Base */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Base; path = TDDWorkshop/Base.lproj/PhotoStream.storyboard; sourceTree = SOURCE_ROOT; };
 		94DCC8181BFA573600ABEF01 /* Speakers.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Speakers.storyboard; sourceTree = "<group>"; };
 		A162F1541BEA992400262528 /* TDDWorkshop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TDDWorkshop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A162F1681BEA992400262528 /* TDDWorkshopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TDDWorkshopTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -154,7 +156,8 @@
 		B27A927D750AD170429319F9 /* SpeakersViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeakersViewControllerSpec.swift; sourceTree = "<group>"; };
 		B27A97ECFB2BF14480743179 /* SeparatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeparatorView.swift; sourceTree = "<group>"; };
 		B27A97ECFEB155F0C61B235C /* Speaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Speaker.swift; sourceTree = "<group>"; };
-		B27A99D35631967D320772EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = TDDWorkshop/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
+		B27A98B9B420C52251EF25DD /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		B27A99D35631967D320772EB /* Base */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Base; path = TDDWorkshop/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
 		B27A9A2BDE9A5AAB28769484 /* TDDWorkshop-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TDDWorkshop-Bridging-Header.h"; sourceTree = "<group>"; };
 		B27A9A9CFA5BBA8E9E675BF3 /* SpeakersCollectionViewDataSourceSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeakersCollectionViewDataSourceSpec.swift; sourceTree = "<group>"; };
 		B27A9BECB1D56A0D473879CE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
@@ -162,7 +165,8 @@
 		B27A9DC5B146671A6A47AD0F /* SpeakerCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeakerCollectionViewCell.swift; sourceTree = "<group>"; };
 		B27A9E3539512E7DAFF90D81 /* speakers.JSON */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = speakers.JSON; sourceTree = "<group>"; };
 		B27A9E63F868EFA7E3B1992D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B27A9E90A1B7C06C761569D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = TDDWorkshop/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
+		B27A9E90A1B7C06C761569D1 /* Base */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Base; path = TDDWorkshop/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
+		B27A9EC017CC555822C2C7EB /* MobileAcademyStyleSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MobileAcademyStyleSheet.swift; sourceTree = "<group>"; };
 		B27A9F0CC5F26F99BDEC1E9D /* SpeakersCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeakersCollectionViewLayout.swift; sourceTree = "<group>"; };
 		BAD3810424F15F2F03E14512 /* Pods_TDDWorkshopTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TDDWorkshopTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E75347F521F274A191ED8136 /* Pods-TDDWorkshop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TDDWorkshop.release.xcconfig"; path = "Pods/Target Support Files/Pods-TDDWorkshop/Pods-TDDWorkshop.release.xcconfig"; sourceTree = "<group>"; };
@@ -305,6 +309,8 @@
 				51043B1632D8201C3B8C5CB0 /* ImagePickerCreating.swift */,
 				510432896B09B1525A354AD8 /* ImageManipulating.swift */,
 				510435D99B8B28F4CD575587 /* ParseAdapting.swift */,
+				B27A9EC017CC555822C2C7EB /* MobileAcademyStyleSheet.swift */,
+				B27A98B9B420C52251EF25DD /* NavigationController.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -699,6 +705,8 @@
 				51043F20539F46ABAE5CA019 /* StreamItemViewController.swift in Sources */,
 				1EDB8BD9E433436CEBF83EAE /* AgendaItem.swift in Sources */,
 				1EDB8E6D471D2514A3B408C7 /* AgendaProvider.swift in Sources */,
+				B27A9A86089F1AB17A7DCF36 /* MobileAcademyStyleSheet.swift in Sources */,
+				B27A93AEFE34DF3A2FD81E1A /* NavigationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

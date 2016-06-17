@@ -9,11 +9,11 @@ import UIKit
 
     //MARK: Properties
 
-    let speakers: Array<Speaker>
+    let speakers: [Speaker]
 
-    //MARK: Initialisers
+    //MARK: Initializers
 
-    init(speakers: Array<Speaker>) {
+    init(speakers: [Speaker]) {
         self.speakers = speakers
     }
 

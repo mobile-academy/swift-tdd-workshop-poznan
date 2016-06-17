@@ -9,7 +9,7 @@ class AgendaViewController: UITableViewController {
 
     var agendaProvider: AgendaProviding!
 
-    // MARK: Initialisers
+    // MARK: Initializers
     
     override init(style: UITableViewStyle) {
         super.init(style: style)

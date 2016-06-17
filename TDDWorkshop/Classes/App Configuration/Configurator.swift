@@ -8,6 +8,7 @@ import Parse
 class Configurator {
 
     func configureApplication(configuration: Configuration, launchOptions: [NSObject: AnyObject]?) {
+        MobileAcademyStyleSheet.applyStyle()
         Parse.setApplicationId(configuration.parseApplicationID, clientKey: configuration.parseClientID)
         PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
     }

@@ -14,7 +14,7 @@ class SpeakersViewController: UICollectionViewController {
         }
     }
 
-    //MARK: Initialisers
+    //MARK: Initializers
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -28,14 +28,14 @@ class SpeakersViewController: UICollectionViewController {
 
     //MARK: Init Helpers
 
-    func defaultSpeakers() -> Array<Speaker> {
+    func defaultSpeakers() -> [Speaker] {
         let resourcePath = NSBundle.mainBundle().pathForResource("speakers", ofType: "JSON")!
         let data = NSData(contentsOfFile: resourcePath)!
 
-        var speakersArray: Array<Speaker> = Array()
+        var speakersArray: [Speaker] = []
 
         do {
-            let unparsedSpeakers = try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments) as? Array<Dictionary<String, String>>
+            let unparsedSpeakers = try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments) as? [[String : String]]
             for speakerDictionary in unparsedSpeakers! {
 
                 let speakerImageName = speakerDictionary["image"]

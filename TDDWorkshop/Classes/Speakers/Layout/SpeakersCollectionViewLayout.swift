@@ -31,8 +31,8 @@ class SpeakersCollectionViewLayout: UICollectionViewFlowLayout {
         return self.layoutAttributesForDecorationViewOfKind(kind: elementKind, forCellAttributes: cellAttributes)
     }
 
-    private func separatorAttributesForBaseAttributes(attributes: Array<UICollectionViewLayoutAttributes>) -> Array<UICollectionViewLayoutAttributes> {
-        var separatorsAttributes: Array<UICollectionViewLayoutAttributes> = Array()
+    private func separatorAttributesForBaseAttributes(attributes: [UICollectionViewLayoutAttributes]) -> [UICollectionViewLayoutAttributes] {
+        var separatorsAttributes: [UICollectionViewLayoutAttributes] = []
 
         for layoutAttributes in attributes {
             let isCellAttribute = layoutAttributes.representedElementCategory == .Cell
