@@ -13,8 +13,9 @@ class SpeakersViewControllerSpec: QuickSpec {
 
             beforeEach {
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let navigationController = storyboard.instantiateViewControllerWithIdentifier("Speakers") as! NavigationController
 
-                sut = storyboard.instantiateViewControllerWithIdentifier("Speakers") as! SpeakersViewController
+                sut = navigationController.topViewController as! SpeakersViewController
             }
 
             afterEach {
@@ -45,7 +46,9 @@ class SpeakersViewControllerSpec: QuickSpec {
                         layout = view?.collectionViewLayout as? UICollectionViewFlowLayout
                     }
 
-                    //TODO: Just don't forget to implement test for layout before doing the workshop
+                    it("should be a speakers collection view layout") {
+                        expect(layout as? SpeakersCollectionViewLayout).toNot(beNil())
+                    }
 
                     describe("when the view lays itself out") {
 

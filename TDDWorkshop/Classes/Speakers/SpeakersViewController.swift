@@ -61,6 +61,7 @@ class SpeakersViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.collectionView?.collectionViewLayout = SpeakersCollectionViewLayout()
         self.collectionView?.alwaysBounceVertical = true
         self.collectionView?.dataSource = self.dataSource
         self.collectionView?.registerClass(SpeakerCollectionViewCell.self, forCellWithReuseIdentifier:SpeakerCellIdentifier)
