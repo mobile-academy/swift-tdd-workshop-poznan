@@ -8,7 +8,7 @@
         <!--Poll-->
         <scene sceneID="aZi-Xi-q7J">
             <objects>
-                <viewController id="JtH-Ic-0do" userLabel="Poll" customClass="PollViewController" customModule="TDDWorkshop" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Poll" id="JtH-Ic-0do" userLabel="Poll" customClass="PollViewController" customModule="TDDWorkshop" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Q3h-dI-9Mt"/>
                         <viewControllerLayoutGuide type="bottom" id="qRo-kG-qz8"/>

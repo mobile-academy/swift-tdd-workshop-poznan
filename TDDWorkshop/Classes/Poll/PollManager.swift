@@ -9,12 +9,14 @@
 import Foundation
 import Parse
 
-class PollManager {
-    static let sharedInstance = PollManager()
-
+class PollManager: PollSender {
     private(set) var pollAlreadySent: Bool = false
 
-    func sendPoll(poll: Poll, completion: ((Bool) -> ())?) {
+    func isPollAlreadySent() -> Bool {
+        return pollAlreadySent
+    }
+
+    func sendPoll(poll: Poll, completion: ((Bool, NSError?) -> ())?) {
         let pollObject = PFObject(className: "Poll", dictionary: poll.toJSON())
         pollObject.saveInBackgroundWithBlock {
             [weak self] (success, error) in
@@ -25,7 +27,7 @@ class PollManager {
                 print("Error sending poll: \(error.description)")
             }
             if let completion = completion {
-                completion(success)
+                completion(success, error)
             }
         }
     }
@@ -48,16 +50,13 @@ struct Poll {
     }
 
     func toJSON() -> [String:AnyObject]? {
-        guard let name = self.name else {
-            return nil
-        }
-        guard let email = self.email else {
+        guard let name = name, let email = email, let comments = comments else {
             return nil
         }
         return [
                 "name": name,
                 "email": email,
-                "comments": self.comments ?? "",
+                "comments": comments,
                 "items": self.items?.map {
                     [
                             "title": $0.title ?? "",
@@ -76,11 +75,11 @@ class PollBuilder {
     private var items: [String:Poll.Item] = [:]
 
     func isValid() -> Bool {
-        return self.poll().isValid()
+        return poll().isValid()
     }
 
     func poll() -> Poll {
-        return Poll(name: name, email: email, comments: comments, items: items.values.flatMap({ $0 }))
+        return Poll(name: name, email: email, comments: comments, items: items.values.flatMap { $0 })
     }
 
     // MARK: Poll building
